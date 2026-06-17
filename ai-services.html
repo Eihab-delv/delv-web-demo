@@ -317,36 +317,7 @@ section { padding: clamp(64px, 9vw, 128px) 0; position: relative; }
 }
 .hero-inner { position: relative; z-index: 1; }
 
-/* ───── Ops / telemetry bar (full-width, under nav) ───── */
-.ops-bar {
-  border-bottom: 1px solid var(--line);
-  background: rgba(0,0,0,0.28);
-  font-family: 'JetBrains Mono', monospace;
-  position: relative;
-  z-index: 2;
-}
-.ops-bar-inner {
-  display: flex; align-items: center; justify-content: space-between; gap: 24px;
-  height: 42px;
-  font-size: 10.5px; letter-spacing: 0.16em; text-transform: uppercase;
-  color: var(--ink-mute);
-}
-.ops-live { display: inline-flex; align-items: center; gap: 9px; color: var(--ink-soft); white-space: nowrap; }
-.ops-live i {
-  width: 7px; height: 7px; border-radius: 50%; background: var(--blue);
-  box-shadow: 0 0 9px var(--blue); animation: pulse 2.6s var(--t) infinite;
-}
-.ops-caps { display: flex; gap: 24px; flex-shrink: 0; }
-.ops-caps span { position: relative; white-space: nowrap; transition: color .2s var(--t); }
-.ops-caps span:hover { color: var(--ink-soft); }
-.ops-caps span + span::before {
-  content: ''; position: absolute; left: -13px; top: 50%;
-  width: 3px; height: 3px; border-radius: 50%; background: var(--line-strong);
-  transform: translateY(-50%);
-}
-.ops-meta { color: var(--ink-mute); white-space: nowrap; }
-@media (max-width: 1000px) { .ops-caps { display: none; } }
-@media (max-width: 520px) { .ops-meta { display: none; } .ops-bar-inner { justify-content: center; } }
+
 .hero h1 { max-width: 16ch; }
 .hero .lead { margin-top: 24px; max-width: 56ch; }
 .hero-actions {
@@ -934,17 +905,6 @@ footer.foot {
 </head>
 <body>
 <div id="nav-slot"></div>
-
-<div class="ops-bar">
-  <div class="wrap ops-bar-inner">
-    <span class="ops-live"><i></i> OPERATING LAYER · LIVE</span>
-    <div class="ops-caps">
-      <span>PLATFORMS</span><span>AI</span><span>ROBOTICS</span><span>ADVISORY</span><span>MANAGED OPS</span>
-    </div>
-    <span class="ops-meta">GLOBAL · 20 YEARS · SECURE BY DESIGN</span>
-  </div>
-</div>
-
 <header class="hero" data-screen-label="AI / Hero">
   <div class="hero-grid"></div>
   <div class="hero-glow"></div>
@@ -1035,12 +995,10 @@ footer.foot {
         <p>From proof of concept to production. We deploy private AI environments, agents, RAG systems and AI-enabled workflows — and run them.</p>
         <ul class="bullets compact">
           <li>Private AI environments</li>
-          <li>Managed enterprise AI</li>
-          <li>AI agents & assistants</li>
+          <li>AI agents &amp; assistants</li>
           <li>RAG / knowledge systems</li>
-          <li>Corporate memory</li>
           <li>Workflow integration</li>
-          <li>Monitoring and reporting</li>
+          <li>AI governance controls</li>
           <li>Managed AI operations</li>
         </ul>
       </div>
@@ -1049,14 +1007,11 @@ footer.foot {
         <h3>AI Agents & Automation</h3>
         <p>Automate the repetitive, amplify the valuable. Agentic workflows, digital workers and process automation that run in production, not just in demos.</p>
         <ul class="bullets compact">
-          <li>AI agents</li>
-          <li>Agentic workflows</li>
+          <li>AI agents &amp; agentic workflows</li>
           <li>Digital workers</li>
-          <li>Process automation</li>
-          <li>Workflow automation</li>
+          <li>Process &amp; workflow automation</li>
           <li>Human-in-the-loop design</li>
           <li>Automation governance</li>
-          <li>Reporting and control rooms</li>
         </ul>
       </div>
     </div>
@@ -1078,9 +1033,8 @@ footer.foot {
         <h2 style="margin-top:18px">The difference is not what we know. It is what we have already delivered.</h2>
       </div>
       <div>
-        <p class="lead">DELV's AI services are grounded in years of work across intelligent automation, digital workers, secure enterprise technology and managed operations.</p>
-        <p>We don't just advise. We build, deploy and manage — so our recommendations are shaped by what works in production.</p>
-        <p>The result: AI that is practical, secure and tied to real business outcomes.</p>
+        <p class="lead">DELV was building intelligent automation, digital workers and human-in-the-loop systems before most AI consultancies existed. We don't just advise — we build, deploy and manage, which means every recommendation is grounded in what works in production.</p>
+        <p>The result: AI that is practical, governed and tied to real business outcomes — not the next trend.</p>
       </div>
     </div>
   </div>
@@ -1193,7 +1147,7 @@ footer.foot {
           <div class="foot-col">
             <h5>Contact</h5>
             <ul>
-              <li>Global delivery</li>
+              <li>Canberra, Australia</li>
               <li><a href="mailto:hello@delv.com">hello@delv.com</a></li>
               <li style="margin-top:14px"><a href="contact.html" style="color:var(--blue)">Start a conversation →</a></li>
             </ul>

@@ -317,36 +317,7 @@ section { padding: clamp(64px, 9vw, 128px) 0; position: relative; }
 }
 .hero-inner { position: relative; z-index: 1; }
 
-/* ───── Ops / telemetry bar (full-width, under nav) ───── */
-.ops-bar {
-  border-bottom: 1px solid var(--line);
-  background: rgba(0,0,0,0.28);
-  font-family: 'JetBrains Mono', monospace;
-  position: relative;
-  z-index: 2;
-}
-.ops-bar-inner {
-  display: flex; align-items: center; justify-content: space-between; gap: 24px;
-  height: 42px;
-  font-size: 10.5px; letter-spacing: 0.16em; text-transform: uppercase;
-  color: var(--ink-mute);
-}
-.ops-live { display: inline-flex; align-items: center; gap: 9px; color: var(--ink-soft); white-space: nowrap; }
-.ops-live i {
-  width: 7px; height: 7px; border-radius: 50%; background: var(--blue);
-  box-shadow: 0 0 9px var(--blue); animation: pulse 2.6s var(--t) infinite;
-}
-.ops-caps { display: flex; gap: 24px; flex-shrink: 0; }
-.ops-caps span { position: relative; white-space: nowrap; transition: color .2s var(--t); }
-.ops-caps span:hover { color: var(--ink-soft); }
-.ops-caps span + span::before {
-  content: ''; position: absolute; left: -13px; top: 50%;
-  width: 3px; height: 3px; border-radius: 50%; background: var(--line-strong);
-  transform: translateY(-50%);
-}
-.ops-meta { color: var(--ink-mute); white-space: nowrap; }
-@media (max-width: 1000px) { .ops-caps { display: none; } }
-@media (max-width: 520px) { .ops-meta { display: none; } .ops-bar-inner { justify-content: center; } }
+
 
 .hero h1 { max-width: 16ch; }
 .hero .lead { margin-top: 24px; max-width: 56ch; }
@@ -714,33 +685,7 @@ footer.foot {
   overflow: hidden;
   aspect-ratio: 4/3;
 }
-.panel-art .pa-grid {
-  position: absolute; inset: 0;
-  background-image:
-    linear-gradient(to right, var(--line) 1px, transparent 1px),
-    linear-gradient(to bottom, var(--line) 1px, transparent 1px);
-  background-size: 32px 32px;
-}
-.panel-art .pa-label {
-  position: absolute;
-  top: 14px;
-  left: 14px;
-  font-family: 'JetBrains Mono', monospace;
-  font-size: 10px;
-  letter-spacing: 0.14em;
-  color: var(--ink-mute);
-  display: flex;
-  align-items: center;
-  gap: 8px;
-}
-.panel-art .pa-label .dot {
-  width: 6px; height: 6px; border-radius: 50%; background: var(--blue);
-  box-shadow: 0 0 8px var(--blue);
-  animation: pulse 2.2s infinite;
-}
-@keyframes pulse {
-  0%, 100% { opacity: 1; transform: scale(1); }
-  50% { opacity: .5; transform: scale(0.85); }
+50% { opacity: .5; transform: scale(0.85); }
 }
 
 /* ───── Inline operating layer diagram ───── */
@@ -1048,26 +993,15 @@ footer.foot {
 </head>
 <body>
 <div id="nav-slot"></div>
-
-<div class="ops-bar">
-  <div class="wrap ops-bar-inner">
-    <span class="ops-live"><i></i> OPERATING LAYER · LIVE</span>
-    <div class="ops-caps">
-      <span>PLATFORMS</span><span>AI</span><span>ROBOTICS</span><span>ADVISORY</span><span>MANAGED OPS</span>
-    </div>
-    <span class="ops-meta">GLOBAL · 20 YEARS · SECURE BY DESIGN</span>
-  </div>
-</div>
-
 <header class="hero" data-screen-label="Home / Hero">
   <div class="hero-grid"></div>
   <div class="hero-glow"></div>
   <div class="wrap hero-inner">
-    <div style="display:grid; grid-template-columns: 1.2fr 1fr; gap: 64px; align-items: center;" class="hero-cols">
+    <div style="display:grid; grid-template-columns: 1.2fr 1fr; gap: 48px; align-items: stretch;" class="hero-cols">
       <div>
-        <div class="eyebrow">TWENTY YEARS · GLOBAL DELIVERY</div>
+        <div class="eyebrow">EST. 2006 · CANBERRA · GOVERNMENT &amp; ENTERPRISE</div>
         <h1 style="margin-top:20px">Emerging technology.<br/><span style="color:var(--blue)">Operational</span> certainty.</h1>
-        <p class="lead">We help government and enterprise put platforms, AI and robotics into real operation — with the strategy, engineering and managed support to make them work at scale.</p>
+        <p class="lead">Government and enterprise choose DELV when they need platforms, AI and robotics in real operation — not in pilot. Strategy, engineering and managed support that goes beyond the demo.</p>
         <div class="hero-actions">
           <a href="services.html" class="btn btn-primary">See what we do <span class="arrow">→</span></a>
           <a href="contact.html" class="btn btn-secondary">Talk to DELV</a>
@@ -1076,62 +1010,9 @@ footer.foot {
           We make what's next operational.
         </div>
       </div>
-      <div class="hero-art">
-        <div class="panel-art">
-          <div class="pa-grid"></div>
-          <div class="pa-label"><span class="dot"></span> OPERATING LAYER · LIVE</div>
-          <svg viewBox="0 0 400 300" style="position:absolute; inset:0; width:100%; height:100%;" preserveAspectRatio="xMidYMid meet">
-            <defs>
-              <linearGradient id="ln" x1="0" x2="1">
-                <stop offset="0" stop-color="#3288B5" stop-opacity="0"/>
-                <stop offset=".5" stop-color="#3288B5" stop-opacity=".9"/>
-                <stop offset="1" stop-color="#3288B5" stop-opacity="0"/>
-              </linearGradient>
-              <linearGradient id="lo" x1="0" x2="1">
-                <stop offset="0" stop-color="#F15E2E" stop-opacity="0"/>
-                <stop offset=".5" stop-color="#F15E2E" stop-opacity=".8"/>
-                <stop offset="1" stop-color="#F15E2E" stop-opacity="0"/>
-              </linearGradient>
-            </defs>
-            <g stroke="rgba(255,255,255,0.18)" fill="none">
-              <rect x="40" y="60" width="320" height="38" rx="2"/>
-              <rect x="40" y="110" width="320" height="38" rx="2"/>
-              <rect x="40" y="160" width="320" height="38" rx="2"/>
-              <rect x="40" y="210" width="320" height="38" rx="2"/>
-            </g>
-            <g fill="rgba(255,255,255,0.55)" font-family="JetBrains Mono, monospace" font-size="9" letter-spacing="1">
-              <text x="50" y="83">PEOPLE</text>
-              <text x="50" y="133">PLATFORMS</text>
-              <text x="50" y="183">INTELLIGENCE</text>
-              <text x="50" y="233">ENVIRONMENTS</text>
-            </g>
-            <g fill="#3288B5">
-              <rect x="160" y="78" width="2" height="6"/>
-              <rect x="220" y="78" width="2" height="6"/>
-              <rect x="290" y="78" width="2" height="6"/>
-              <rect x="180" y="128" width="2" height="6"/>
-              <rect x="240" y="128" width="2" height="6"/>
-              <rect x="300" y="128" width="2" height="6"/>
-              <rect x="170" y="178" width="2" height="6"/>
-              <rect x="260" y="178" width="2" height="6"/>
-              <rect x="170" y="228" width="2" height="6"/>
-              <rect x="230" y="228" width="2" height="6"/>
-              <rect x="320" y="228" width="2" height="6"/>
-            </g>
-            <line x1="40" y1="79" x2="360" y2="79" stroke="url(#ln)" stroke-width="1">
-              <animate attributeName="x1" values="40;120;40" dur="6s" repeatCount="indefinite"/>
-              <animate attributeName="x2" values="240;360;240" dur="6s" repeatCount="indefinite"/>
-            </line>
-            <line x1="40" y1="179" x2="360" y2="179" stroke="url(#lo)" stroke-width="1">
-              <animate attributeName="x1" values="120;40;120" dur="7s" repeatCount="indefinite"/>
-              <animate attributeName="x2" values="360;240;360" dur="7s" repeatCount="indefinite"/>
-            </line>
-            <g fill="rgba(255,255,255,0.45)" font-family="JetBrains Mono, monospace" font-size="8">
-              <text x="40" y="40">SYS / 04</text>
-              <text x="320" y="40">UPTIME 99.98</text>
-            </g>
-          </svg>
-        </div>
+      <div class="hero-art" style="position:relative;min-height:380px;align-self:stretch;">
+        <canvas id="dg" style="position:absolute;inset:0;display:block;width:100%;height:100%;"></canvas>
+      </div>
       </div>
     </div>
 
@@ -1153,6 +1034,422 @@ footer.foot {
       </div>
     </div>
   </div>
+
+<script>
+/* DELV Globe — floating, nodes connect to each other */
+(function(){
+  var cv=document.getElementById('dg');
+  if(!cv)return;
+  var ctx=cv.getContext('2d');
+  var W=0,H=0,CX=0,CY=0,R=0,ok=false;
+
+  function resize(){
+    var par=cv.parentElement;
+    var DPR=Math.min(window.devicePixelRatio||1,2);
+    var rect=par.getBoundingClientRect();
+    W=rect.width||420; H=rect.height||520;
+    if(W<10||H<10){W=420;H=520;}
+    cv.width=Math.round(W*DPR); cv.height=Math.round(H*DPR);
+    cv.style.width=W+'px'; cv.style.height=H+'px';
+    ctx.setTransform(DPR,0,0,DPR,0,0);
+    CX=W/2; CY=H/2;
+    R=Math.min(W,H)*0.46;
+    ok=true;
+  }
+  window.addEventListener('resize',function(){resize();});
+
+  /* Projection */
+  var rot=1.3;
+  var TILT=22*Math.PI/180;
+  var SPD=0.0009;
+
+  function pr(lat,lon){
+    var phi=lat*Math.PI/180, lam=lon*Math.PI/180+rot;
+    var px=Math.cos(phi)*Math.cos(lam);
+    var py=Math.sin(phi);
+    var pz=Math.cos(phi)*Math.sin(lam);
+    var y2=py*Math.cos(TILT)-pz*Math.sin(TILT);
+    var z2=py*Math.sin(TILT)+pz*Math.cos(TILT);
+    return{sx:CX+px*R, sy:CY-y2*R, v:z2>-0.04};
+  }
+
+  /* Simplified continent outlines [lon, lat] */
+  var LAND=[
+    [[-18,16],[-16,20],[-14,24],[-10,29],[-8,36],[-6,36],[-2,36],
+     [4,37],[10,37],[15,38],[20,34],[25,32],[32,31],[34,28],
+     [38,22],[44,12],[51,12],[44,0],[40,-6],[36,-18],[34,-22],
+     [30,-30],[26,-34],[18,-34],[14,-30],[12,-26],[8,-22],
+     [4,-10],[2,0],[4,6],[0,6],[-4,5],[-8,5],[-12,8],[-14,12],[-18,16]],
+    [[-80,10],[-77,7],[-76,4],[-70,2],[-52,4],[-50,2],[-48,-2],
+     [-35,-8],[-35,-12],[-38,-18],[-40,-22],[-44,-23],[-48,-26],
+     [-50,-32],[-52,-34],[-54,-34],[-58,-38],[-62,-42],[-65,-46],
+     [-68,-52],[-70,-55],[-64,-56],[-52,-54],[-58,-48],[-62,-42],
+     [-58,-34],[-50,-30],[-48,-26],[-44,-24],[-38,-14],
+     [-35,-6],[-36,0],[-50,2],[-52,4],[-58,6],[-62,10],[-72,12],[-80,10]],
+    [[-168,72],[-162,60],[-154,58],[-148,60],[-136,58],[-130,54],
+     [-125,49],[-124,38],[-117,32],[-110,22],[-105,20],[-90,16],
+     [-85,10],[-83,9],[-79,8],[-79,26],[-82,30],[-80,32],
+     [-76,36],[-74,40],[-70,42],[-66,44],[-60,47],[-54,48],
+     [-56,52],[-58,60],[-64,64],[-78,70],[-88,73],[-100,72],
+     [-116,73],[-130,70],[-140,68],[-148,64],[-160,60],[-168,72]],
+    [[-44,83],[-24,80],[-18,76],[-18,70],[-24,68],[-44,66],[-52,70],[-48,76],[-44,83]],
+    [[-8,36],[-8,44],[-4,44],[0,44],[4,44],[8,44],[10,44],
+     [14,46],[18,48],[22,44],[26,44],[28,42],[28,40],
+     [22,38],[18,40],[14,40],[10,38],[8,38],[4,37],
+     [0,43],[-2,44],[-8,44],[-8,38],[-8,36]],
+    [[10,55],[8,57],[8,58],[14,58],[18,60],[20,64],[18,68],
+     [16,70],[20,70],[24,70],[28,72],[30,70],[30,64],[28,60],
+     [26,60],[30,58],[28,54],[24,54],[20,56],[14,56],[10,55]],
+    [[-5,50],[-2,52],[0,52],[2,54],[0,56],[-2,58],[-4,58],[-6,56],[-5,50]],
+    [[28,42],[36,42],[40,40],[48,42],[52,44],[56,44],[60,42],
+     [70,40],[80,28],[86,24],[92,22],[96,18],[100,6],
+     [104,-2],[108,-6],[110,-6],[104,2],[100,4],
+     [96,14],[98,18],[102,20],[106,22],[110,20],[114,22],
+     [120,30],[122,32],[122,38],[124,40],[126,38],[126,34],
+     [130,32],[130,36],[122,36],[118,24],[114,20],
+     [110,18],[106,16],[104,10],[96,14],[90,14],[80,8],
+     [76,14],[72,20],[70,22],[64,22],[62,22],[58,22],
+     [54,26],[50,24],[46,22],[42,12],[38,12],[36,14],
+     [36,22],[36,28],[36,32],[36,36],[28,42]],
+    [[64,22],[72,22],[76,14],[80,8],[80,22],[86,22],[90,22],
+     [86,24],[82,28],[78,32],[74,34],[70,24],[64,22]],
+    [[96,28],[100,20],[102,4],[104,2],[100,4],[100,2],
+     [104,-2],[106,-2],[104,2],[100,6],[98,8],
+     [98,12],[100,18],[102,20],[96,18],[96,28]],
+    [[114,-22],[118,-20],[122,-18],[128,-14],[132,-12],
+     [136,-12],[140,-14],[142,-18],[148,-20],[152,-24],
+     [154,-28],[154,-34],[150,-38],[148,-38],[146,-40],
+     [144,-38],[140,-36],[136,-36],[134,-33],[130,-33],
+     [128,-34],[124,-34],[120,-34],[116,-34],[114,-30],
+     [112,-28],[113,-24],[114,-22]],
+    [[172,-34],[176,-38],[174,-42],[170,-44],[172,-34]],
+    [[130,32],[132,34],[136,36],[138,36],[140,38],[142,40],
+     [140,38],[136,34],[132,34],[130,32]],
+    [[-24,64],[-14,64],[-14,66],[-24,66],[-24,64]]
+  ];
+
+  /* Draw visible polygon segments */
+  function dPoly(pts){
+    ctx.beginPath();
+    var pv=false,go=false;
+    for(var i=0;i<=pts.length;i++){
+      var q=pts[i%pts.length],p=pr(q[1],q[0]);
+      if(p.v){
+        if(!pv||!go){ctx.moveTo(p.sx,p.sy);go=true;}
+        else ctx.lineTo(p.sx,p.sy);
+      }
+      pv=p.v;
+    }
+  }
+
+  /* Grid */
+  function dGrid(front,a){
+    ctx.strokeStyle='rgba(0,155,215,'+a+')';
+    ctx.lineWidth=0.5;
+    var lat,lon,p,pv,go;
+    for(lat=-75;lat<=75;lat+=15){
+      ctx.beginPath();pv=null;go=false;
+      for(lon=-180;lon<=180;lon+=3){
+        p=pr(lat,lon);
+        if(p.v===front){
+          if(!pv||pv.v!==front||!go){ctx.moveTo(p.sx,p.sy);go=true;}
+          else ctx.lineTo(p.sx,p.sy);
+        }
+        pv=p;
+      }
+      ctx.stroke();
+    }
+    for(lon=-180;lon<180;lon+=15){
+      ctx.beginPath();pv=null;go=false;
+      for(lat=-90;lat<=90;lat+=3){
+        p=pr(lat,lon);
+        if(p.v===front){
+          if(!pv||pv.v!==front||!go){ctx.moveTo(p.sx,p.sy);go=true;}
+          else ctx.lineTo(p.sx,p.sy);
+        }
+        pv=p;
+      }
+      ctx.stroke();
+    }
+  }
+
+  /* Partial bezier for draw-on arcs */
+  function pBez(x0,y0,cx,cy,x1,y1,T){
+    if(T<=0)return;
+    if(T>=1){ctx.moveTo(x0,y0);ctx.quadraticCurveTo(cx,cy,x1,y1);return;}
+    var nc=x0+T*(cx-x0),ncy=y0+T*(cy-y0);
+    var ex=(1-T)*(1-T)*x0+2*(1-T)*T*cx+T*T*x1;
+    var ey=(1-T)*(1-T)*y0+2*(1-T)*T*cy+T*T*y1;
+    ctx.moveTo(x0,y0);ctx.quadraticCurveTo(nc,ncy,ex,ey);
+  }
+
+  /* Node alpha: fade in (700ms) then fade out (800ms before life ends) */
+  function nAlpha(nd,t){
+    var age=t-nd.born;
+    var fi=Math.min(1,age/700);
+    var fo=age>nd.life-800?Math.max(0,1-(age-(nd.life-800))/800):1;
+    return fi*fo;
+  }
+
+  /* Cities */
+  var CITIES=[
+    {n:'Canberra',la:-35.3,lo:149.1},{n:'Singapore',la:1.4,lo:103.8},
+    {n:'London',la:51.5,lo:-0.1},{n:'Tokyo',la:35.7,lo:139.7},
+    {n:'Dubai',la:25.2,lo:55.3},{n:'Mumbai',la:19.1,lo:72.9},
+    {n:'Seoul',la:37.6,lo:127},{n:'Cairo',la:30.1,lo:31.2},
+    {n:'Berlin',la:52.5,lo:13.4},{n:'Lagos',la:6.5,lo:3.4},
+    {n:'Bangkok',la:13.8,lo:100.5},{n:'Istanbul',la:41,lo:28.9},
+    {n:'Nairobi',la:-1.3,lo:36.8},{n:'Hong Kong',la:22.3,lo:114.2},
+    {n:'Sydney',la:-33.9,lo:151.2},{n:'Johannesburg',la:-26.2,lo:28},
+    {n:'Amsterdam',la:52.4,lo:4.9},{n:'Moscow',la:55.8,lo:37.6},
+    {n:'Riyadh',la:24.7,lo:46.7},{n:'Paris',la:48.9,lo:2.3},
+    {n:'New York',la:40.7,lo:-74},{n:'Sao Paulo',la:-23.5,lo:-46.6},
+    {n:'Toronto',la:43.7,lo:-79.4},{n:'Accra',la:5.6,lo:-0.2},
+    {n:'Jakarta',la:-6.2,lo:106.8},{n:'Kuala Lumpur',la:3.1,lo:101.7}
+  ];
+  var SVCS=['Platform Dev','AI Services','Robotics','Advisory'];
+  var C='#F15E2E';
+
+  /* Satellite orbits — [3D inclination rad, radius factor, speed rad/frame, initial phase] */
+  var SATS=[
+    {inc:0.30, rf:1.10, spd: 0.0022, ph:0.8},  /* low inclination, CW  */
+    {inc:1.25, rf:1.16, spd:-0.0016, ph:3.4},  /* near-polar, CCW      */
+    {inc:0.65, rf:1.07, spd: 0.0019, ph:5.6},  /* mid-inclination, CW  */
+  ];
+
+  var nodes=[],conns=[],queue=[],nxt=-Infinity;
+
+  function refill(){queue=CITIES.slice().sort(function(){return Math.random()-.5;});}
+  refill();
+
+  function spawn(t){
+    if(nodes.length>=4)return;
+    var tried=0;
+    while(tried<CITIES.length){
+      if(!queue.length)refill();
+      var c=queue.pop();tried++;
+      var p=pr(c.la,c.lo);
+      if(!p.v)continue;
+      /* Edge clearance */
+      var ed=R-Math.sqrt((p.sx-CX)*(p.sx-CX)+(p.sy-CY)*(p.sy-CY));
+      if(ed<R*.13)continue;
+      /* Spacing — tighter to fit 4 nodes */
+      var ok2=true, minD=R*.38;
+      for(var j=0;j<nodes.length;j++){
+        var np=pr(nodes[j].la,nodes[j].lo);
+        if(!np.v)continue;
+        var dx=p.sx-np.sx,dy=p.sy-np.sy;
+        if(Math.sqrt(dx*dx+dy*dy)<minD){ok2=false;break;}
+      }
+      if(ok2){
+        var newNode={la:c.la,lo:c.lo,n:c.n,
+          svc:SVCS[Math.floor(Math.random()*4)],born:t,life:5500};
+        /* Connect to every existing node */
+        nodes.forEach(function(ex){conns.push({a:ex,b:newNode,born:t});});
+        nodes.push(newNode);
+        nxt=t+(nodes.length<3?500:1100)+Math.random()*500;
+        return;
+      }
+    }
+    nxt=t+600;
+  }
+
+  /* Render */
+  var lastT=0;
+  function draw(t){
+    requestAnimationFrame(draw);
+    if(!ok)return;
+    if(!lastT)lastT=t;
+    var dt=Math.min(t-lastT,80);lastT=t;
+    rot+=SPD*(dt/16.67);
+
+    /* Expire nodes & connections */
+    nodes=nodes.filter(function(n){return t-n.born<n.life;});
+    conns=conns.filter(function(c){
+      return nodes.indexOf(c.a)>=0&&nodes.indexOf(c.b)>=0;
+    });
+    if(t>=nxt&&nodes.length<4)spawn(t);
+
+    /* ── Fully transparent background — globe floats over hero ── */
+    ctx.clearRect(0,0,W,H);
+
+    /* Subtle outer atmosphere halo (only near the globe) */
+    var atm=ctx.createRadialGradient(CX,CY,R*.85,CX,CY,R*1.38);
+    atm.addColorStop(0,'rgba(0,60,140,0.07)');
+    atm.addColorStop(1,'rgba(0,20,60,0)');
+    ctx.fillStyle=atm;
+    ctx.beginPath();ctx.arc(CX,CY,R*1.38,0,Math.PI*2);ctx.fill();
+
+    /* ── Clipped globe interior ── */
+    ctx.save();
+    ctx.beginPath();ctx.arc(CX,CY,R-.5,0,Math.PI*2);ctx.clip();
+
+    ctx.fillStyle='rgba(0,4,18,0.97)';ctx.fillRect(0,0,W,H);
+
+    /* Inner edge atmosphere */
+    var ia=ctx.createRadialGradient(CX,CY,R*.7,CX,CY,R*.99);
+    ia.addColorStop(0,'rgba(0,50,120,0)');
+    ia.addColorStop(1,'rgba(0,80,180,0.2)');
+    ctx.fillStyle=ia;ctx.fillRect(0,0,W,H);
+
+    dGrid(false,0.04);
+    dGrid(true,0.09);
+
+    ctx.fillStyle='rgba(0,48,100,0.56)';
+    LAND.forEach(function(l){dPoly(l);ctx.fill();});
+
+    ctx.strokeStyle='rgba(0,140,200,0.13)';ctx.lineWidth=7;
+    LAND.forEach(function(l){dPoly(l);ctx.stroke();});
+    ctx.strokeStyle='rgba(0,170,218,0.30)';ctx.lineWidth=3;
+    LAND.forEach(function(l){dPoly(l);ctx.stroke();});
+    ctx.strokeStyle='rgba(0,195,235,0.58)';ctx.lineWidth=1.2;
+    LAND.forEach(function(l){dPoly(l);ctx.stroke();});
+    ctx.strokeStyle='rgba(0,222,252,0.84)';ctx.lineWidth=0.5;
+    LAND.forEach(function(l){dPoly(l);ctx.stroke();});
+
+    ctx.restore();
+
+    /* ── Outer rim glow ── */
+    for(var g=7;g>=0;g--){
+      ctx.strokeStyle='rgba(0,195,240,'+(g*.022+.018)+')';
+      ctx.lineWidth=6+g*6;
+      ctx.beginPath();ctx.arc(CX,CY,R,0,Math.PI*2);ctx.stroke();
+    }
+    ctx.strokeStyle='rgba(0,218,252,0.92)';ctx.lineWidth=1.4;
+    ctx.beginPath();ctx.arc(CX,CY,R,0,Math.PI*2);ctx.stroke();
+    ctx.strokeStyle='rgba(140,248,255,0.3)';ctx.lineWidth=0.6;
+    ctx.beginPath();ctx.arc(CX,CY,R-.8,0,Math.PI*2);ctx.stroke();
+
+    /* ── Satellite orbit paths (ring visible outside globe) ── */
+    SATS.forEach(function(sat){
+      var oR=sat.rf*R;
+      /* Projected vertical semi-axis of this orbital ellipse */
+      var ry=oR*Math.abs(Math.cos(sat.inc+TILT));
+      ctx.save();
+      /* evenodd clip: show orbit only OUTSIDE the globe sphere */
+      ctx.beginPath();
+      ctx.rect(0,0,W,H);
+      ctx.arc(CX,CY,R+1,0,Math.PI*2,true);
+      ctx.clip('evenodd');
+      ctx.beginPath();
+      ctx.ellipse(CX,CY,oR,ry,0,0,Math.PI*2);
+      ctx.setLineDash([3,9]);
+      ctx.strokeStyle='rgba(0,160,220,0.11)';
+      ctx.lineWidth=0.7;
+      ctx.stroke();
+      ctx.setLineDash([]);
+      ctx.restore();
+    });
+
+    /* ── Connection arcs (node ↔ node) ── */
+    conns.forEach(function(conn){
+      var pa=pr(conn.a.la,conn.a.lo);
+      var pb=pr(conn.b.la,conn.b.lo);
+      if(!pa.v||!pb.v)return;
+
+      var al=Math.min(nAlpha(conn.a,t),nAlpha(conn.b,t));
+      var aT=Math.min(1,(t-conn.born)/1300);
+
+      var dx=pb.sx-pa.sx,dy=pb.sy-pa.sy;
+      var ln=Math.sqrt(dx*dx+dy*dy);
+      /* Curve slightly perpendicular to the arc midpoint */
+      var cpx=(pa.sx+pb.sx)/2-(dy/ln)*ln*.18;
+      var cpy=(pa.sy+pb.sy)/2+(dx/ln)*ln*.18;
+
+      ctx.save();ctx.globalAlpha=al*.62;
+      ctx.strokeStyle='rgba(0,200,242,0.72)';ctx.lineWidth=0.9;
+      ctx.beginPath();pBez(pa.sx,pa.sy,cpx,cpy,pb.sx,pb.sy,aT);ctx.stroke();
+      ctx.restore();
+    });
+
+    /* ── City node dots + labels ── */
+    nodes.forEach(function(nd){
+      var p=pr(nd.la,nd.lo);
+      if(!p.v)return;
+      var al=nAlpha(nd,t);
+
+      /* Glow blob */
+      var ng=ctx.createRadialGradient(p.sx,p.sy,0,p.sx,p.sy,14);
+      ng.addColorStop(0,'rgba(241,94,46,'+(al*.72)+')');
+      ng.addColorStop(1,'rgba(241,94,46,0)');
+      ctx.fillStyle=ng;ctx.fillRect(p.sx-14,p.sy-14,28,28);
+
+      /* Pulse ring */
+      var pulse=((t-nd.born)%2000)/2000;
+      ctx.save();ctx.globalAlpha=al*(1-pulse)*.6;
+      ctx.strokeStyle=C;ctx.lineWidth=.9;
+      ctx.beginPath();ctx.arc(p.sx,p.sy,4+pulse*16,0,Math.PI*2);ctx.stroke();
+      ctx.restore();
+
+      /* Dot */
+      ctx.save();ctx.globalAlpha=al;
+      ctx.fillStyle=C;
+      ctx.beginPath();ctx.arc(p.sx,p.sy,4,0,Math.PI*2);ctx.fill();
+      ctx.restore();
+
+      /* Labels */
+      var above=p.sy<CY;
+      var anch=p.sx<CX-65?'left':p.sx>CX+65?'right':'center';
+      ctx.save();ctx.globalAlpha=al;
+      ctx.textAlign=anch;ctx.textBaseline='middle';
+      /* Service label only — city names removed */
+      ctx.font='bold 13px "JetBrains Mono",monospace';
+      ctx.fillStyle='rgba(255,120,60,'+(al*.92)+')';
+      ctx.fillText(nd.svc,p.sx,p.sy+(above?22:-16));
+      ctx.restore();
+    });
+
+    /* ── Satellites — dots + short motion trails ── */
+    SATS.forEach(function(sat){
+      var theta=sat.spd*(t/16.67)+sat.ph;
+      var oR=sat.rf*R;
+      /* Orthographic projection of circular orbit with 3-D inclination */
+      var sx=CX+oR*Math.cos(theta);
+      var sy=CY-oR*Math.sin(theta)*Math.cos(sat.inc+TILT);
+      var sz=oR*Math.sin(theta)*Math.sin(sat.inc+TILT); /* +sz = in front of globe */
+      var front=sz/oR;           /* -1 (behind) … +1 (in front) */
+      if(front<0.04)return;      /* hidden behind globe, skip */
+      var vis=Math.min(1,front*2.5); /* fade near the limb */
+
+      /* Soft glow around satellite */
+      var sg=ctx.createRadialGradient(sx,sy,0,sx,sy,9);
+      sg.addColorStop(0,'rgba(160,230,255,'+(vis*.42)+')');
+      sg.addColorStop(1,'rgba(0,180,240,0)');
+      ctx.fillStyle=sg;
+      ctx.fillRect(sx-9,sy-9,18,18);
+
+      /* Satellite body */
+      ctx.save();ctx.globalAlpha=vis*.88;
+      ctx.fillStyle='rgba(225,250,255,0.95)';
+      ctx.beginPath();ctx.arc(sx,sy,2.1,0,Math.PI*2);ctx.fill();
+      ctx.restore();
+
+      /* Motion trail — 5 steps backwards along the orbit */
+      var step=0.036*Math.sign(sat.spd);
+      for(var k=1;k<=5;k++){
+        var ta=theta-step*k;
+        var tsx=CX+oR*Math.cos(ta);
+        var tsy=CY-oR*Math.sin(ta)*Math.cos(sat.inc+TILT);
+        var tsz=oR*Math.sin(ta)*Math.sin(sat.inc+TILT);
+        if(tsz<0)continue; /* trail point behind globe */
+        ctx.save();ctx.globalAlpha=vis*(1-k/6)*0.36;
+        ctx.fillStyle='rgba(160,225,255,1)';
+        ctx.beginPath();ctx.arc(tsx,tsy,Math.max(0.3,1.5-k*.2),0,Math.PI*2);ctx.fill();
+        ctx.restore();
+      }
+    });
+  }
+
+  requestAnimationFrame(function(){
+    requestAnimationFrame(function(){
+      resize();
+      nxt=performance.now();
+      requestAnimationFrame(draw);
+    });
+  });
+})();
+</script>
+
 </header>
 
 <style>
@@ -1169,7 +1466,7 @@ footer.foot {
 <section class="cred section-tight" style="padding: 0;">
   <div class="cred-row">
     <div class="cred-item"><span>EXPERIENCE</span>20 years</div>
-    <div class="cred-item"><span>REACH</span>Global delivery</div>
+    <div class="cred-item"><span>RECOGNITION</span>BRW Fast 100</div>
     <div class="cred-item"><span>SECTORS</span>Gov & Enterprise</div>
     <div class="cred-item"><span>CAPABILITY</span>Platforms · AI · Robotics</div>
     <div class="cred-item"><span>APPROACH</span>Human-centred</div>
@@ -1185,8 +1482,8 @@ footer.foot {
         <h2>From connected technology to intelligent operations.</h2>
       </div>
       <div style="max-width:480px">
-        <p>For twenty years, DELV has helped organisations put emerging technology to work — securely and at scale — from enterprise mobility and managed endpoints to IoT, automation, AI and robotics.</p>
-        <p>We don't stop at what's possible. We make it governed, supported and operational.</p>
+        <p>For twenty years, DELV has helped organisations put emerging technology to work — securely, at scale — from enterprise mobility and managed endpoints to IoT, automation, AI and now physical robotics.</p>
+        <p>We make it governed, supported and operational. Not just explored.</p>
         <a href="about.html" class="btn btn-ghost">Read our story <span class="arrow">→</span></a>
       </div>
     </div>
@@ -1424,7 +1721,7 @@ footer.foot {
         <div class="eyebrow">WHY DELV</div>
         <h2>Experience that reduces risk.</h2>
       </div>
-      <p style="max-width:460px">The difference is not what we know. It is what we have already delivered.</p>
+      <p style="max-width:460px">Not what we claim. What we have already built, deployed and managed.</p>
     </div>
 
     <div class="grid grid-3">
@@ -1536,8 +1833,8 @@ footer.foot {
 <section class="cta-banner">
   <div class="wrap">
     <div class="eyebrow no-line" style="justify-content:center; display:inline-flex;">LET'S TALK</div>
-    <h2 style="margin-top:18px">Tell us what you are trying to make operational.</h2>
-    <p class="lead" style="margin-left:auto; margin-right:auto;">Platform, AI deployment, robotics pilot or a decision to clarify — we'll take you from first conversation to running operation.</p>
+    <h2 style="margin-top:18px">Ready to move from idea to operation?</h2>
+    <p class="lead" style="margin-left:auto; margin-right:auto;">Platform, AI deployment, robotics pilot or a technology decision to clarify — start with a conversation.</p>
     <div class="hero-actions">
       <a href="contact.html" class="btn btn-primary">Start a conversation <span class="arrow">→</span></a>
       <a href="48-hour-prototype.html" class="btn btn-secondary">Explore the 48 Hour Prototype</a>
@@ -1639,7 +1936,7 @@ footer.foot {
           <div class="foot-col">
             <h5>Contact</h5>
             <ul>
-              <li>Global delivery</li>
+              <li>Canberra, Australia</li>
               <li><a href="mailto:hello@delv.com">hello@delv.com</a></li>
               <li style="margin-top:14px"><a href="contact.html" style="color:var(--blue)">Start a conversation →</a></li>
             </ul>

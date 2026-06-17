@@ -317,36 +317,7 @@ section { padding: clamp(64px, 9vw, 128px) 0; position: relative; }
 }
 .hero-inner { position: relative; z-index: 1; }
 
-/* ───── Ops / telemetry bar (full-width, under nav) ───── */
-.ops-bar {
-  border-bottom: 1px solid var(--line);
-  background: rgba(0,0,0,0.28);
-  font-family: 'JetBrains Mono', monospace;
-  position: relative;
-  z-index: 2;
-}
-.ops-bar-inner {
-  display: flex; align-items: center; justify-content: space-between; gap: 24px;
-  height: 42px;
-  font-size: 10.5px; letter-spacing: 0.16em; text-transform: uppercase;
-  color: var(--ink-mute);
-}
-.ops-live { display: inline-flex; align-items: center; gap: 9px; color: var(--ink-soft); white-space: nowrap; }
-.ops-live i {
-  width: 7px; height: 7px; border-radius: 50%; background: var(--blue);
-  box-shadow: 0 0 9px var(--blue); animation: pulse 2.6s var(--t) infinite;
-}
-.ops-caps { display: flex; gap: 24px; flex-shrink: 0; }
-.ops-caps span { position: relative; white-space: nowrap; transition: color .2s var(--t); }
-.ops-caps span:hover { color: var(--ink-soft); }
-.ops-caps span + span::before {
-  content: ''; position: absolute; left: -13px; top: 50%;
-  width: 3px; height: 3px; border-radius: 50%; background: var(--line-strong);
-  transform: translateY(-50%);
-}
-.ops-meta { color: var(--ink-mute); white-space: nowrap; }
-@media (max-width: 1000px) { .ops-caps { display: none; } }
-@media (max-width: 520px) { .ops-meta { display: none; } .ops-bar-inner { justify-content: center; } }
+
 .hero h1 { max-width: 16ch; }
 .hero .lead { margin-top: 24px; max-width: 56ch; }
 .hero-actions {
@@ -934,24 +905,13 @@ footer.foot {
 </head>
 <body>
 <div id="nav-slot"></div>
-
-<div class="ops-bar">
-  <div class="wrap ops-bar-inner">
-    <span class="ops-live"><i></i> OPERATING LAYER · LIVE</span>
-    <div class="ops-caps">
-      <span>PLATFORMS</span><span>AI</span><span>ROBOTICS</span><span>ADVISORY</span><span>MANAGED OPS</span>
-    </div>
-    <span class="ops-meta">GLOBAL · 20 YEARS · SECURE BY DESIGN</span>
-  </div>
-</div>
-
 <header class="hero" data-screen-label="Platform / Hero">
   <div class="hero-grid"></div>
   <div class="hero-glow"></div>
   <div class="wrap hero-inner">
     <div class="eyebrow">SERVICE · 01 / PLATFORM DEVELOPMENT</div>
     <h1 style="margin-top:20px;">Platforms built for <span style="color:var(--blue)">real-world use</span>.</h1>
-    <p class="lead">Workflows and ideas turned into production platforms — designed, built and managed by one team that stays past launch.</p>
+    <p class="lead">Ideas and workflows turned into production platforms — designed, built and managed by one team that does not disappear after launch. No handover gaps.</p>
     <div class="hero-actions">
       <a href="contact.html" class="btn btn-primary">Discuss a platform project <span class="arrow">→</span></a>
       <a href="48-hour-prototype.html" class="btn btn-secondary">Prototype an idea first</a>
@@ -1153,7 +1113,7 @@ footer.foot {
           <div class="foot-col">
             <h5>Contact</h5>
             <ul>
-              <li>Global delivery</li>
+              <li>Canberra, Australia</li>
               <li><a href="mailto:hello@delv.com">hello@delv.com</a></li>
               <li style="margin-top:14px"><a href="contact.html" style="color:var(--blue)">Start a conversation →</a></li>
             </ul>
