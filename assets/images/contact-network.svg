@@ -1,0 +1,70 @@
+<svg width="100%" viewBox="0 0 680 510" role="img" xmlns="http://www.w3.org/2000/svg">
+<title>DELV AI network</title>
+<desc>Abstract AI network with DELV at centre connected to Advisory, AI Apps, Agents, Platforms, Automation, Integrations</desc>
+<style>
+  @keyframes pulse { 0%,100%{opacity:.9} 50%{opacity:.3} }
+  @keyframes travel { 0%{stroke-dashoffset:0} 100%{stroke-dashoffset:-120} }
+  .p1{animation:pulse 3.2s ease-in-out infinite}
+  .p2{animation:pulse 2.8s ease-in-out infinite .6s}
+  .p3{animation:pulse 3.6s ease-in-out infinite 1.1s}
+  .p4{animation:pulse 2.4s ease-in-out infinite 1.8s}
+  .p5{animation:pulse 3.0s ease-in-out infinite .3s}
+  .trav{stroke-dasharray:8 20;animation:travel 2.6s linear infinite}
+  .trav2{stroke-dasharray:8 20;animation:travel 3.2s linear infinite .8s}
+  .trav3{stroke-dasharray:8 20;animation:travel 2.9s linear infinite 1.5s}
+</style>
+
+<rect width="680" height="510" fill="#0f1318"/>
+
+<line x1="340" y1="255" x2="140" y2="110" stroke="#1e3a4a" stroke-width="1"/>
+<line x1="340" y1="255" x2="540" y2="110" stroke="#1e3a4a" stroke-width="1"/>
+<line x1="340" y1="255" x2="100" y2="320" stroke="#1e3a4a" stroke-width="1"/>
+<line x1="340" y1="255" x2="580" y2="320" stroke="#1e3a4a" stroke-width="1"/>
+<line x1="340" y1="255" x2="240" y2="420" stroke="#1e3a4a" stroke-width="1"/>
+<line x1="340" y1="255" x2="460" y2="420" stroke="#1e3a4a" stroke-width="1"/>
+<line x1="140" y1="110" x2="540" y2="110" stroke="#1e3a4a" stroke-width="1"/>
+<line x1="100" y1="320" x2="240" y2="420" stroke="#1e3a4a" stroke-width="1"/>
+<line x1="580" y1="320" x2="460" y2="420" stroke="#1e3a4a" stroke-width="1"/>
+<line x1="140" y1="110" x2="100" y2="320" stroke="#182a38" stroke-width="1"/>
+<line x1="540" y1="110" x2="580" y2="320" stroke="#182a38" stroke-width="1"/>
+
+<line x1="340" y1="255" x2="140" y2="110" stroke="#3288B5" stroke-width="1.2" class="trav" opacity=".7"/>
+<line x1="340" y1="255" x2="580" y2="320" stroke="#3288B5" stroke-width="1.2" class="trav2" opacity=".7"/>
+<line x1="340" y1="255" x2="240" y2="420" stroke="#F15E2E" stroke-width="1.2" class="trav3" opacity=".7"/>
+<line x1="140" y1="110" x2="540" y2="110" stroke="#3288B5" stroke-width="1" class="trav" opacity=".5"/>
+
+<circle cx="340" cy="255" r="28" fill="#0d1f2d" stroke="#3288B5" stroke-width="1.5"/>
+<circle cx="340" cy="255" r="20" fill="#0f2436" stroke="#3288B5" stroke-width="1"/>
+<circle cx="340" cy="255" r="6" fill="#3288B5"/>
+<circle cx="340" cy="255" r="34" fill="none" stroke="#3288B5" stroke-width="0.5" opacity=".35" class="p1"/>
+<circle cx="340" cy="255" r="44" fill="none" stroke="#3288B5" stroke-width="0.4" opacity=".2" class="p2"/>
+
+<text x="340" y="252" text-anchor="middle" fill="#7dc8e8" font-family="'JetBrains Mono',monospace" font-size="9" letter-spacing="2" opacity=".9">DELV</text>
+<text x="340" y="264" text-anchor="middle" fill="#7dc8e8" font-family="'JetBrains Mono',monospace" font-size="7" letter-spacing="1.5" opacity=".6">AI</text>
+
+<circle cx="140" cy="110" r="18" fill="#0d1f2d" stroke="#3288B5" stroke-width="1.2" class="p3"/>
+<circle cx="140" cy="110" r="5" fill="#3288B5"/>
+<text x="140" y="93" text-anchor="middle" fill="#5aaed4" font-family="'JetBrains Mono',monospace" font-size="9" letter-spacing="1" opacity=".85">ADVISORY</text>
+
+<circle cx="540" cy="110" r="18" fill="#0d1f2d" stroke="#3288B5" stroke-width="1.2" class="p4"/>
+<circle cx="540" cy="110" r="5" fill="#3288B5"/>
+<text x="540" y="93" text-anchor="middle" fill="#5aaed4" font-family="'JetBrains Mono',monospace" font-size="9" letter-spacing="1" opacity=".85">AI APPS</text>
+
+<circle cx="100" cy="320" r="18" fill="#1a1008" stroke="#F15E2E" stroke-width="1.2" class="p5"/>
+<circle cx="100" cy="320" r="5" fill="#F15E2E"/>
+<text x="100" y="303" text-anchor="middle" fill="#e8845a" font-family="'JetBrains Mono',monospace" font-size="9" letter-spacing="1" opacity=".85">AGENTS</text>
+
+<circle cx="580" cy="320" r="18" fill="#0d1f2d" stroke="#3288B5" stroke-width="1.2" class="p2"/>
+<circle cx="580" cy="320" r="5" fill="#3288B5"/>
+<text x="580" y="303" text-anchor="middle" fill="#5aaed4" font-family="'JetBrains Mono',monospace" font-size="9" letter-spacing="1" opacity=".85">PLATFORMS</text>
+
+<circle cx="240" cy="420" r="18" fill="#1a1008" stroke="#F15E2E" stroke-width="1.2" class="p3"/>
+<circle cx="240" cy="420" r="5" fill="#F15E2E"/>
+<text x="240" y="450" text-anchor="middle" fill="#e8845a" font-family="'JetBrains Mono',monospace" font-size="9" letter-spacing="1" opacity=".85">AUTOMATION</text>
+
+<circle cx="460" cy="420" r="18" fill="#0d1f2d" stroke="#3288B5" stroke-width="1.2" class="p1"/>
+<circle cx="460" cy="420" r="5" fill="#3288B5"/>
+<text x="460" y="450" text-anchor="middle" fill="#5aaed4" font-family="'JetBrains Mono',monospace" font-size="9" letter-spacing="1" opacity=".85">INTEGRATIONS</text>
+
+<text x="340" y="490" text-anchor="middle" fill="#3a5a6a" font-family="'JetBrains Mono',monospace" font-size="8" letter-spacing="3" opacity=".6">AI THAT ACTUALLY WORKS</text>
+</svg>
