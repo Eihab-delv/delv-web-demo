@@ -11,7 +11,6 @@
       { href: '48-hour-prototype.html', label: '48 Hour Prototype', featured: true },
     ]},
     { href: 'industries.html', label: 'Industries', key: 'industries' },
-    { href: 'insights.html', label: 'Insights', key: 'insights' },
     { href: 'contact.html', label: 'Contact', key: 'contact' },
   ];
 
@@ -82,7 +81,6 @@
             <ul>
               <li><a href="about.html">About</a></li>
               <li><a href="industries.html">Industries</a></li>
-              <li><a href="insights.html">Insights</a></li>
               <li><a href="contact.html">Contact</a></li>
             </ul>
           </div>

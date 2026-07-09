@@ -958,18 +958,19 @@ footer.foot {
         </div>
       </aside>
 
-      <form class="form" onsubmit="event.preventDefault(); document.getElementById('thanks').style.display='block'; this.style.display='none';">
+      <!-- ✏️ Replace YOUR_FORMSPREE_ID below with your form endpoint from formspree.io/new -->
+      <form class="form" id="contact-form" action="https://formspree.io/f/YOUR_FORMSPREE_ID" method="POST">
         <div class="form-row">
-          <div><label for="fn">First name</label><input id="fn" type="text" required placeholder="Alex" /></div>
-          <div><label for="ln">Last name</label><input id="ln" type="text" required placeholder="Surname" /></div>
+          <div><label for="fn">First name</label><input id="fn" name="first_name" type="text" required placeholder="Alex" /></div>
+          <div><label for="ln">Last name</label><input id="ln" name="last_name" type="text" required placeholder="Surname" /></div>
         </div>
         <div class="form-row">
-          <div><label for="em">Work email</label><input id="em" type="email" required placeholder="alex@company.com" /></div>
-          <div><label for="org">Organisation</label><input id="org" type="text" required placeholder="Company / Agency" /></div>
+          <div><label for="em">Work email</label><input id="em" name="email" type="email" required placeholder="alex@company.com" /></div>
+          <div><label for="org">Organisation</label><input id="org" name="organisation" type="text" required placeholder="Company / Agency" /></div>
         </div>
         <div>
           <label for="int">What are you interested in?</label>
-          <select id="int" required>
+          <select id="int" name="service" required>
             <option value="">Select an option</option>
             <option>Platform Development</option>
             <option>AI Services</option>
@@ -981,11 +982,14 @@ footer.foot {
         </div>
         <div>
           <label for="msg">Tell us what you are working on</label>
-          <textarea id="msg" required placeholder="The idea, problem, decision or opportunity you'd like to discuss…"></textarea>
+          <textarea id="msg" name="message" required placeholder="The idea, problem, decision or opportunity you'd like to discuss…"></textarea>
         </div>
         <div style="display:flex; justify-content: space-between; align-items: center; gap: 16px; flex-wrap: wrap;">
           <p class="mono" style="font-size: 11px; color: var(--ink-mute); margin: 0; letter-spacing:.08em;">We respond within one business day.</p>
-          <button type="submit" class="btn btn-primary">Send message <span class="arrow">→</span></button>
+          <button type="submit" id="submit-btn" class="btn btn-primary">Send message <span class="arrow">→</span></button>
+        </div>
+        <div id="form-error" style="display:none; padding: 14px 16px; border: 1px solid rgba(241,94,46,0.4); border-radius: var(--radius); color: var(--orange); font-size: 14px;">
+          Something went wrong. Please try again or email us directly at <a href="mailto:hello@delv.com" style="color:var(--orange); text-decoration:underline;">hello@delv.com</a>
         </div>
       </form>
 
@@ -994,6 +998,41 @@ footer.foot {
         <h2 style="margin-top: 18px;">Thank you. We will be in touch.</h2>
         <p class="lead" style="margin: 20px auto 0;">A senior DELV team member will respond within one business day.</p>
       </div>
+
+      <script>
+      (function() {
+        var form = document.getElementById('contact-form');
+        var btn  = document.getElementById('submit-btn');
+        var err  = document.getElementById('form-error');
+        if (!form) return;
+        form.addEventListener('submit', function(e) {
+          e.preventDefault();
+          btn.disabled = true;
+          btn.innerHTML = 'Sending… <span class="arrow">→</span>';
+          err.style.display = 'none';
+          fetch(form.action, {
+            method: 'POST',
+            body: new FormData(form),
+            headers: { 'Accept': 'application/json' }
+          }).then(function(res) {
+            if (res.ok) {
+              form.style.display = 'none';
+              document.getElementById('thanks').style.display = 'block';
+            } else {
+              res.json().then(function(data) {
+                err.style.display = 'block';
+                btn.disabled = false;
+                btn.innerHTML = 'Send message <span class="arrow">→</span>';
+              });
+            }
+          }).catch(function() {
+            err.style.display = 'block';
+            btn.disabled = false;
+            btn.innerHTML = 'Send message <span class="arrow">→</span>';
+          });
+        });
+      })();
+      </script>
     </div>
   </div>
 </section>
@@ -1023,7 +1062,6 @@ footer.foot {
       { href: '48-hour-prototype.html', label: '48 Hour Prototype', featured: true },
     ]},
     { href: 'industries.html', label: 'Industries', key: 'industries' },
-    { href: 'insights.html', label: 'Insights', key: 'insights' },
     { href: 'contact.html', label: 'Contact', key: 'contact' },
   ];
 
@@ -1094,7 +1132,6 @@ footer.foot {
             <ul>
               <li><a href="about.html">About</a></li>
               <li><a href="industries.html">Industries</a></li>
-              <li><a href="insights.html">Insights</a></li>
               <li><a href="contact.html">Contact</a></li>
             </ul>
           </div>
