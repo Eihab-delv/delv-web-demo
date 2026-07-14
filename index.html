@@ -201,7 +201,7 @@ section { padding: clamp(64px, 9vw, 128px) 0; position: relative; }
 }
 .nav-links a:hover { color: var(--ink); }
 .nav-links a.active { color: var(--ink); }
-.nav-links a.active::after {
+.nav-links a.active::before {
   content: '';
   position: absolute;
   bottom: -2px;
@@ -209,6 +209,9 @@ section { padding: clamp(64px, 9vw, 128px) 0; position: relative; }
   right: 14px;
   height: 2px;
   background: var(--blue);
+}
+.has-drop > a.active {
+  color: var(--ink) !important;
 }
 .nav-cta {
   display: flex;
@@ -987,6 +990,179 @@ footer.foot {
   .flow-diagram svg animate, .flow-diagram svg animateMotion { display: none; }
 }
 
+
+/* ───── Animation system ───── */
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(24px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+@keyframes slideRight {
+  from { opacity: 0; transform: translateX(-16px); }
+  to   { opacity: 1; transform: translateX(0); }
+}
+@keyframes pulse {
+  0%, 100% { opacity: 1; transform: scale(1); }
+  50%       { opacity: .5; transform: scale(0.85); }
+}
+
+.anim-ready { opacity: 0; }
+.anim-fadeup { animation: fadeUp .65s cubic-bezier(.2,.7,.2,1) forwards; }
+.anim-fadein { animation: fadeIn .65s cubic-bezier(.2,.7,.2,1) forwards; }
+.anim-slide  { animation: slideRight .55s cubic-bezier(.2,.7,.2,1) forwards; }
+.anim-d1 { animation-delay: .1s; }
+.anim-d2 { animation-delay: .2s; }
+.anim-d3 { animation-delay: .3s; }
+.anim-d4 { animation-delay: .45s; }
+.anim-d5 { animation-delay: .6s; }
+
+/* ───── Typography polish ───── */
+h1 { font-size: clamp(38px, 5.5vw, 72px); font-weight: 500; letter-spacing: -0.025em; line-height: 1.05; }
+h2 { font-size: clamp(28px, 3.8vw, 52px); font-weight: 500; letter-spacing: -0.02em; line-height: 1.08; }
+h3 { font-size: clamp(20px, 2.2vw, 28px); font-weight: 500; letter-spacing: -0.015em; line-height: 1.2; }
+h4 { font-size: 17px; font-weight: 600; letter-spacing: -0.01em; }
+.lead { font-size: clamp(16px, 1.4vw, 20px); line-height: 1.6; }
+p { font-size: 15px; line-height: 1.65; }
+
+/* Standardise eyebrow label size */
+.eyebrow {
+  font-size: 10px !important;
+  letter-spacing: 0.18em !important;
+}
+
+/* Consistent mono labels (cred items, etc.) */
+.cred-item {
+  font-size: 11px !important;
+  letter-spacing: 0.1em !important;
+}
+.cred-item span {
+  font-size: 9px !important;
+}
+
+/* Card text consistency */
+.card h3 { font-size: clamp(18px, 1.8vw, 24px); }
+.card p   { font-size: 14px; line-height: 1.6; }
+
+/* Section header consistency */
+.section-head h2 { margin-top: 12px; }
+.section-head p  { font-size: 15px; line-height: 1.65; }
+
+/* Nav link size lock */
+.nav-links a { font-size: 13.5px; }
+.nav-cta .btn { font-size: 13px; }
+
+/* Footer text consistency */
+.foot-col a { font-size: 13px; }
+.foot-col h5 { font-size: 10px !important; letter-spacing: 0.18em !important; }
+.foot-brand .tag-line { font-size: 18px; }
+.foot-brand .sub { font-size: 13px; }
+.foot-bot { font-size: 10px !important; }
+
+/* ───── Enhanced card hover ───── */
+.card {
+  transition: all .35s cubic-bezier(.2,.7,.2,1);
+}
+.card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 16px 48px rgba(0,0,0,0.25);
+}
+
+/* ───── Button polish ───── */
+.btn {
+  transition: all .28s cubic-bezier(.2,.7,.2,1);
+}
+.btn-primary {
+  box-shadow: 0 2px 12px rgba(241,94,46,0.18);
+}
+.btn-primary:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 8px 28px rgba(241,94,46,0.35) !important;
+}
+.btn-secondary:hover {
+  transform: translateY(-1px);
+}
+.btn-blue:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 8px 24px rgba(50,136,181,0.3);
+}
+
+/* ───── Nav polish ───── */
+.nav {
+  transition: box-shadow .3s cubic-bezier(.2,.7,.2,1);
+}
+.nav.scrolled {
+  box-shadow: 0 4px 32px rgba(0,0,0,0.25);
+  border-bottom-color: rgba(255,255,255,0.12);
+}
+
+/* ───── Hero glow enhancement ───── */
+.hero-glow {
+  animation: fadeIn 1.2s ease forwards;
+}
+
+/* ───── Insight card enhancement ───── */
+.insight-card {
+  transition: all .35s cubic-bezier(.2,.7,.2,1);
+}
+.insight-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 16px 48px rgba(0,0,0,0.25);
+}
+
+/* ───── Form toggle ───── */
+.form-toggle-btn {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 18px 28px;
+  border-radius: var(--radius);
+  font-weight: 600;
+  font-size: 15px;
+  cursor: pointer;
+  border: 1px solid var(--orange);
+  background: var(--orange);
+  color: #fff;
+  transition: all .28s cubic-bezier(.2,.7,.2,1);
+  box-shadow: 0 4px 20px rgba(241,94,46,0.25);
+  letter-spacing: 0.01em;
+}
+.form-toggle-btn:hover {
+  background: #ff6e3e;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 32px rgba(241,94,46,0.35);
+}
+.form-toggle-btn .ftb-icon {
+  width: 22px; height: 22px;
+  border: 2px solid rgba(255,255,255,0.7);
+  border-radius: 50%;
+  display: flex; align-items: center; justify-content: center;
+  flex-shrink: 0;
+  transition: transform .25s cubic-bezier(.2,.7,.2,1);
+}
+.form-toggle-btn.open .ftb-icon {
+  transform: rotate(45deg);
+}
+.form-collapsible {
+  overflow: hidden;
+  max-height: 0;
+  opacity: 0;
+  transition: max-height .55s cubic-bezier(.2,.7,.2,1), opacity .4s ease, margin .4s ease;
+  margin-top: 0;
+}
+.form-collapsible.open {
+  max-height: 1200px;
+  opacity: 1;
+  margin-top: 28px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .anim-ready, .anim-fadeup, .anim-fadein, .anim-slide,
+  .card, .insight-card, .btn { transition: none !important; animation: none !important; }
+  .anim-ready { opacity: 1; }
+}
 </style>
 <link rel="icon" type="image/png" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEIAAABACAYAAACunKHjAAAAAXNSR0IArs4c6QAAAERlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAA6ABAAMAAAABAAEAAKACAAQAAAABAAAAQqADAAQAAAABAAAAQAAAAACSbdJ3AAAJS0lEQVR4Ae1aC3AVVxk+5+zeBNIAeQEjMk4rjDN1fHQGX/VRgwmBYKNTi9Ep1voqHUdF2jwIQmEhxUBCChjLaFVEcawaxnaqYwyENpaiU5MwlAGd2tIyiKU0rwaS3Ju7u+f4nU0vvcn+N7k33DDTmT0zmbv7/+f/z3++/V97NowFI0AgQCBAIEAgQCBAIEAgQCBAIEAgQCBAYNoQ4Ik031hozRjKGF4tGcuk5ghucibt491HGk5SfKYUX9Lw11XcCM1Tjq3IOckSDdMQjvtUR82KM5RIXmH1QjNDfM5lsJYakglTyD9cOrzrdYqtaWYixrlCFi14Vn7ayMi6W7m2f5oQTLnq5MJb7//4hX/sDvsmcK7YjpZFYuaMOskT4u0TG0/gWMcdiQxKoW4Zz4vdC1PuZEbmXUI6MdLVXy5MJmXkBAi/vEokLgRBGyVZlnSZvUnZ4W6FKw3GmD87wrhh3hLOEl9PpMM2RJM7PHBauQ6T0ciU/pSUjDP1UFf1yrPUOnNLKm5jXJRLOzzWvjftlc4I0FEV8IYhSj5GSwwEZvS37T0vFXuYCyM2f8yvZ6QQG+aXVM4bw3jz5lTV8iGlWC2bokcAaERf5EWmBn9C6WeFlqlcXsv1YycGwhIYqOaetl3tBHsMaUIg9EwViuyDJ7zAKDAUnpYwF7pKVYzRGnczO5L1R2XbfxNmRhw1uUsdFpyJ7V015QOURIFx5UsA6zZFhIQGH/TLzOVbKdnxtEmB6Gtpusy42pooyj0jlPh2fvG6m8cr1/ft1lJHMGkpPTEFz+BmCN4QfS4SvvIYpTev1JoNfZsVXI4a2kmQpfb1PF3/AsUfT5sUCC3QY89qRp5oJz0QhuCpzOLM2DJeeey+c0NZO5Pu4yl5BZBjgllnrPJoTE/8L48Ofgeu/x4khnjy6DXXidw5b4xEHvYzaUpSQOCxOtjog7AN5cPvG15V4eadBUXVS+llICWMbTBuKBmvEKFMphznLyeqVrZS+nKL179LcP6ATuLU0CHFuKx77VhTN8WnaMkBAcnutp3PIuh+pxMYNTjn8EVZy5asQYbyj86q5adRx/brTU44ED7StUdYyLQAGun3BnM2MsMsgD0+VTqxA/CubHvWAR9zAkLSQGgd2GwtQn2AeqpeChDmJ/Lzcr6caD20YPXSHun2nliCSRooruTBE5XLu6gpBcuqP8S58VVdkqkB5NC28M3n2q0IxU9ESwkIdJEvIiU0kbkCK+iwxvPcnFO4Loda8Ln1Ky8wxfbwBBVEA4QE2S+kqqPkGbNgr9zGhJiB1XxTPG+Vzp9hZ4uPOQkhJSC0rqga3sOkcw5B71ftldPQ4pBpfNfPHKXIyMg+NFdnqRDTAMEbHunYcPvLlHzBsuHbUU5X0N6A3OW6YWGYmyHrR4lSGEcjdhPHJS6vHH2kVzG5HU0MwYUFuqZzsS5nRc2N1IST1h1vwG22jw8PL7btkf8yU+6l5BaUrcnyvAF+T/E1sJKpX7zeuvN5ij8Zjd7NJFI5ZvSgUvY/yY5T13Vh5pu2uzGRmssz+W9dO9qhe4XYGPUQvqOrsqwnRov/tcOzv8FF6INkpRgtl5eQZXfEy6RyPSUgXmppGkGRf1BRaRura9flgt+d/5nqj1DGvLR25YghhIWk4rmwboXxTnCKhZ0D1Px5RT+Yj4k1JAgQ8B4Ilw29T+3+HyWfDG1KQGjFfUcaDuNd4wkq1r0Q5SKTCZRTSyc4/+isWtEiHbslVk6RXrZ1WWXD/pkICGZXAax3krjrcimdM9wO/5SSTZZGGpmssBRsC8AgmySdK4QwSvKPD36e1IceQYUM3XrjQUfbFy8aeoKal1dU8V4m+H1e7iEm6ITBpbS62/cNEuykSdcERP/hXafh3o8mLKfaDMW3LiizkOj842RlaQfC6GdCibrm8nKyTUQHacH1s7GOT4FeFyi2deedf9zHTJFwTUDotXgGq0fnfRGB6l8aLTDK2fvtyNC9fuYopS888/tdNaVHKH7+sgeK4FZf8Fp43wS8XSoZ1bmKNTeTIPpEJiCQpWiC+SRrbknlWsZDe0mDPYDkRSacJT2tey6SCijiF62M/P7BdiHMW6mw8BKsG93f29b4TUo8VRrxGFNVwVgoM/vnAOFU4jOL0DuYa1anojn/jaG7EoGgW3yA02cK/lAqOieamxYgXv2TNayU2IJXJH8gY3XviXJxb25J5fsmMibGm/PJmlzo2qRbdmqM5iS5F8dvr1D8qdDSAoReuPdTWU8q5baSiROJDgnvBlOyrckYGZrhrEVZXgQE/dO95sk+69juj/zMqVPSkiNiy+cXVXxYCHEM+8a7NuEcQkipVKnuQWIy43/nF9//bpebnaDnJqoUUrr39LY1/Hq87LXcp80jtBG9Rxs7AMKv6CYLFQZ+IZTatrj0ewkPJRxmbIJXJQQBYXa8t3/gsWvZNCWbViD0AiiY25nr9FDlVLfI2ORHB6KZX6GMySuu/higWk2/XcLHtAID5bLrUZyUpXekHYj+tp36E8Bu8oUMtusEqATfOOezNbljt2Lp04havGbjuNsfVrpc4iXmUE9r/dNj5dJzl3YgtFkq44Yfo5z+J3E5NW8KjTj63ODqmFs8eA/AK6Z6Bq9cus4VxYykku1VpSlcpDVZxq9bUFSxGk/xN+TG9ETdCzB1SCj+jORqMfLHt0DNIhMkvAFNZH3Pkcb18Wuk85o+iU3DCj3urN8XiME1yAn0BxhkVTRMq/BCtQqH7/B63SX7Q0LnGoB5wTQzdqXBrIQqpiU0vNX0JwCu9CcAfWRFGqBZui0fTY4ECJDSuQaY/fC1lrqkj+bJxSYhTh8QWLj7cOMzODU64CW6SQyh2FoOQB3LDUX2U/x00qYVCG1ohss2IL6fTxUM3aGiWl5EAN2nT8TSuWlK17QD8Wp7Y49w+Z3YVCc3UBnps9e3bAPfA03JlxWXd/S21f/7Leb0XdHf+9O83tArf+8PLfjAIWGE8Hmb34zOc+boKThyhwZGbx65wOs9lBpCUjiIj4tf6zvacF1A0Nuls1iagYhXh/+luAmHKWXoq5aigC5CvcgGPwwwzgGcY67rPNl3tPFf8TLX4/q6AzFmU/hHj/kZg5mX5mTbrNkiv3qPmR/cBAgECAQIBAgECAQIBAgECAQIBAgECAQIBAi8rRH4PxPn4PliVjR5AAAAAElFTkSuQmCC">
 </head>
@@ -1003,8 +1179,8 @@ footer.foot {
         <p style="margin-top:16px; font-size:clamp(17px,1.8vw,22px); font-weight:600; color:var(--orange); letter-spacing:-0.01em;">DELV will make it operational.</p>
         <p class="lead" style="margin-top:16px;">AI is reshaping workflows, customer engagement, employee tools, digital platforms and decision-making. DELV helps organisations respond with the advisory, development, deployment and managed support needed to turn change into real-world capability.</p>
         <div class="hero-actions">
-          <a href="services.html" class="btn btn-primary">See how DELV can help <span class="arrow">→</span></a>
-          <a href="contact.html" class="btn btn-secondary">Start a conversation</a>
+          <a href="services.html" class="btn btn-primary">See how DELV Group can help <span class="arrow">→</span></a>
+          <a href="contact.html" class="btn btn-secondary">Contact Us</a>
         </div>
         <div class="mono" style="margin-top:48px; font-size:13px; color:var(--ink-mute); letter-spacing:.04em;">
           Turning emerging technology into operational certainty.
@@ -1703,7 +1879,7 @@ footer.foot {
       <p class="lead">When AI, automation or platform ideas are hard to explain, a prototype can create clarity fast. DELV's 48 Hour Prototype turns an idea, workflow or product concept into something stakeholders can see, test and discuss within two business days.</p>
       <div class="hero-actions" style="margin-top:28px;">
         <a href="48-hour-prototype.html" class="btn btn-primary">Learn more <span class="arrow">→</span></a>
-        <a href="contact.html" class="btn btn-secondary">Start a conversation</a>
+        <a href="contact.html" class="btn btn-secondary">Contact Us</a>
       </div>
     </div>
   </div>
@@ -2113,7 +2289,7 @@ footer.foot {
     <h2 style="margin-top:18px">Ready to move from idea to operation?</h2>
     <p class="lead" style="margin-left:auto; margin-right:auto;">Whether you need a platform built, AI deployed, a robotics pilot scoped or a technology decision clarified, DELV can help you move from idea to operation.</p>
     <div class="hero-actions" style="justify-content:center; flex-wrap:wrap;">
-      <a href="contact.html" class="btn btn-primary">Start a conversation <span class="arrow">→</span></a>
+      <a href="contact.html" class="btn btn-primary">Contact Us <span class="arrow">→</span></a>
       <a href="services.html" class="btn btn-secondary">See all services</a>
     </div>
   </div>
@@ -2190,7 +2366,7 @@ footer.foot {
         </a>
         <ul class="nav-links">${links}</ul>
         <div class="nav-cta">
-          <a href="contact.html" class="btn btn-secondary">Start a conversation</a>
+          <a href="contact.html" class="btn btn-secondary">Contact Us</a>
           <button class="nav-burger" aria-label="Open menu" onclick="document.querySelector('.mobile-menu').classList.add('open')">
             <svg width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M3 7h18M3 12h18M3 17h18" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
           </button>
@@ -2249,13 +2425,13 @@ footer.foot {
             <h5>Contact</h5>
             <ul>
               <li>Canberra, Australia</li>
-              <li><a href="mailto:hello@delv.com">hello@delv.com</a></li>
-              <li style="margin-top:14px"><a href="contact.html" style="color:var(--blue)">Start a conversation →</a></li>
+              <li><a href="mailto:contact@delv.com">contact@delv.com</a></li>
+              <li style="margin-top:14px"><a href="contact.html" style="color:var(--blue)">Contact Us →</a></li>
             </ul>
           </div>
         </div>
         <div class="foot-bot">
-          <span>© ${new Date().getFullYear()} DELV — Twenty years of operational technology</span>
+          <span>© ${new Date().getFullYear()} DELV Group — Twenty years of operational technology</span>
           <span>EMERGING TECHNOLOGY · OPERATIONAL CERTAINTY</span>
         </div>
       </div>
@@ -2280,5 +2456,54 @@ footer.foot {
   DELV.mountNav('home');
   DELV.mountFooter();
 </script>
+
+<script>
+// ── Scroll animations ──────────────────────────────────────
+(function() {
+  if (!('IntersectionObserver' in window)) return;
+  var io = new IntersectionObserver(function(entries) {
+    entries.forEach(function(e) {
+      if (!e.isIntersecting) return;
+      var el = e.target;
+      el.classList.add('anim-fadeup');
+      io.unobserve(el);
+    });
+  }, { threshold: 0.08 });
+
+  function observe() {
+    document.querySelectorAll('section, .card, .insight-card, .cred-item, .tl-node, .op-cell').forEach(function(el) {
+      el.classList.add('anim-ready');
+      io.observe(el);
+    });
+    // Stagger cards in grids
+    document.querySelectorAll('.grid .card, .grid .insight-card').forEach(function(el, i) {
+      el.style.animationDelay = (0.08 * (i % 4)) + 's';
+    });
+  }
+
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', observe);
+  } else {
+    observe();
+  }
+})();
+
+// ── Nav scroll class ──────────────────────────────────────
+(function() {
+  var nav = document.querySelector('.nav');
+  if (!nav) return;
+  var tick = false;
+  window.addEventListener('scroll', function() {
+    if (!tick) {
+      requestAnimationFrame(function() {
+        nav.classList.toggle('scrolled', window.scrollY > 40);
+        tick = false;
+      });
+      tick = true;
+    }
+  }, { passive: true });
+})();
+</script>
+
 </body>
 </html>
