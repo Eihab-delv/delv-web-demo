@@ -150,7 +150,7 @@ section { padding: clamp(64px, 9vw, 128px) 0; position: relative; }
   border-bottom: 1px solid var(--line-strong);
   border-radius: 0;
 }
-.btn-ghost:hover { color: var(--blue); border-color: var(--blue); }
+.btn-ghost:hover { color: var(--blue); border-bottom-color: var(--blue); }
 
 .btn-blue { background: var(--blue); color: #fff; }
 .btn-blue:hover { background: #3d9bcb; }
@@ -618,7 +618,7 @@ footer.foot {
     linear-gradient(135deg, rgba(241,94,46,0.10), rgba(241,94,46,0.02) 40%),
     rgba(36, 42, 52, 0.6);
   border-radius: var(--radius);
-  padding: clamp(32px, 4vw, 56px);
+  padding: clamp(20px, 2.5vw, 36px);
   position: relative;
   overflow: hidden;
 }
@@ -745,7 +745,7 @@ footer.foot {
   background: var(--bg-elev);
   border: 1px solid var(--line);
   border-radius: var(--radius);
-  padding: clamp(28px, 4vw, 44px);
+  padding: clamp(20px, 2.5vw, 32px);
 }
 .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 18px; }
 .form label {
@@ -932,13 +932,23 @@ footer.foot {
 .anim-d4 { animation-delay: .45s; }
 .anim-d5 { animation-delay: .6s; }
 
-/* ───── Typography polish ───── */
-h1 { font-size: clamp(38px, 5.5vw, 72px); font-weight: 500; letter-spacing: -0.025em; line-height: 1.05; }
-h2 { font-size: clamp(28px, 3.8vw, 52px); font-weight: 500; letter-spacing: -0.02em; line-height: 1.08; }
-h3 { font-size: clamp(20px, 2.2vw, 28px); font-weight: 500; letter-spacing: -0.015em; line-height: 1.2; }
-h4 { font-size: 17px; font-weight: 600; letter-spacing: -0.01em; }
-.lead { font-size: clamp(16px, 1.4vw, 20px); line-height: 1.6; }
-p { font-size: 15px; line-height: 1.65; }
+/* ───── Typography — scaled down ───── */
+h1 { font-size: clamp(26px, 3.2vw, 48px) !important; font-weight: 500; letter-spacing: -0.025em; line-height: 1.08; }
+h2 { font-size: clamp(22px, 2.4vw, 36px) !important; font-weight: 500; letter-spacing: -0.02em; line-height: 1.1; }
+h3 { font-size: clamp(16px, 1.4vw, 20px) !important; font-weight: 500; letter-spacing: -0.01em; line-height: 1.25; }
+h4 { font-size: 14px !important; font-weight: 600; letter-spacing: -0.005em; }
+.lead { font-size: clamp(14px, 1.1vw, 16px) !important; line-height: 1.65; }
+p { font-size: 14px; line-height: 1.65; }
+
+/* Section padding — tighter */
+section { padding: clamp(40px, 5vw, 80px) 0 !important; }
+.section-tight { padding: clamp(28px, 3.5vw, 56px) 0 !important; }
+.hero { padding: clamp(56px, 7vw, 96px) 0 clamp(36px, 4vw, 64px) !important; }
+
+/* Card — tighter padding */
+.card { padding: 22px !important; }
+.card h3 { font-size: clamp(15px, 1.2vw, 18px) !important; margin-bottom: 8px; }
+.card p   { font-size: 13px; line-height: 1.6; }
 
 /* Standardise eyebrow label size */
 .eyebrow {
@@ -946,33 +956,42 @@ p { font-size: 15px; line-height: 1.65; }
   letter-spacing: 0.18em !important;
 }
 
-/* Consistent mono labels (cred items, etc.) */
+/* Consistent mono labels */
 .cred-item {
-  font-size: 11px !important;
-  letter-spacing: 0.1em !important;
+  font-size: 10px !important;
+  letter-spacing: 0.08em !important;
+  padding: 18px 14px !important;
 }
 .cred-item span {
   font-size: 9px !important;
 }
 
-/* Card text consistency */
-.card h3 { font-size: clamp(18px, 1.8vw, 24px); }
-.card p   { font-size: 14px; line-height: 1.6; }
-
-/* Section header consistency */
-.section-head h2 { margin-top: 12px; }
-.section-head p  { font-size: 15px; line-height: 1.65; }
+/* Section header */
+.section-head { margin-bottom: 36px !important; }
+.section-head h2 { margin-top: 10px; }
+.section-head p  { font-size: 14px; line-height: 1.65; }
 
 /* Nav link size lock */
-.nav-links a { font-size: 13.5px; }
-.nav-cta .btn { font-size: 13px; }
+.nav-links a { font-size: 13px; }
+.nav-cta .btn { font-size: 12.5px; padding: 9px 16px !important; }
+/* FIX: prevent Services dropdown chevron wrapping to next line */
+.has-drop > a { white-space: nowrap; }
 
 /* Footer text consistency */
 .foot-col a { font-size: 13px; }
 .foot-col h5 { font-size: 10px !important; letter-spacing: 0.18em !important; }
-.foot-brand .tag-line { font-size: 18px; }
+.foot-brand .tag-line { font-size: 16px !important; }
 .foot-brand .sub { font-size: 13px; }
 .foot-bot { font-size: 10px !important; }
+
+/* Op layer cells */
+.op-cell { padding: 20px !important; min-height: 130px !important; }
+.op-cell h4 { font-size: 15px !important; }
+.op-cell p  { font-size: 12px !important; }
+
+/* Insight card */
+.insight-card { padding: 24px !important; min-height: 220px !important; }
+.insight-card h3 { font-size: 18px !important; }
 
 /* ───── Enhanced card hover ───── */
 .card {
@@ -1027,33 +1046,35 @@ p { font-size: 15px; line-height: 1.65; }
 
 /* ───── Form toggle ───── */
 .form-toggle-btn {
-  display: flex;
+  display: inline-flex;
   align-items: center;
   gap: 12px;
-  padding: 18px 28px;
+  padding: 14px 28px;
   border-radius: var(--radius);
   font-weight: 600;
-  font-size: 15px;
+  font-size: 16px;
   cursor: pointer;
-  border: 1px solid var(--orange);
-  background: var(--orange);
-  color: #fff;
+  border: none;
+  background: transparent;
+  color: var(--orange);
   transition: all .28s cubic-bezier(.2,.7,.2,1);
-  box-shadow: 0 4px 20px rgba(241,94,46,0.25);
   letter-spacing: 0.01em;
 }
 .form-toggle-btn:hover {
-  background: #ff6e3e;
-  transform: translateY(-2px);
-  box-shadow: 0 8px 32px rgba(241,94,46,0.35);
+  background: rgba(241,94,46,0.06);
+  transform: translateY(-1px);
+}
+.form-toggle-btn.open {
+  background: rgba(241,94,46,0.06);
 }
 .form-toggle-btn .ftb-icon {
-  width: 22px; height: 22px;
-  border: 2px solid rgba(255,255,255,0.7);
+  width: 20px; height: 20px;
+  border: 1.5px solid var(--orange);
   border-radius: 50%;
   display: flex; align-items: center; justify-content: center;
   flex-shrink: 0;
   transition: transform .25s cubic-bezier(.2,.7,.2,1);
+  color: var(--orange);
 }
 .form-toggle-btn.open .ftb-icon {
   transform: rotate(45deg);
@@ -1068,7 +1089,7 @@ p { font-size: 15px; line-height: 1.65; }
 .form-collapsible.open {
   max-height: 1200px;
   opacity: 1;
-  margin-top: 28px;
+  margin-top: 32px;
 }
 
 @media (prefers-reduced-motion: reduce) {
@@ -1093,37 +1114,39 @@ p { font-size: 15px; line-height: 1.65; }
 
 <section style="padding-top: 0;" data-screen-label="Contact / Form">
   <div class="wrap">
-    <div style="display:grid; grid-template-columns: 1fr 1.4fr; gap: 64px; align-items: start;" class="contact-grid">
+    <div style="display:grid; grid-template-columns: 1fr 1.5fr; gap: 56px; align-items: start;" class="contact-grid">
 
       <aside class="contact-side">
-        <figure class="media-frame r-4x3" style="margin-bottom: 4px;">
-          <img
-            src="assets/images/contact-network.svg"
-            alt="DELV AI network — Advisory, Apps, Agents, Platforms, Automation, Integrations"
-            loading="lazy"
-            style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center;display:block;"
-          >
-          <div class="mf-overlay"></div>
-          <figcaption class="mf-tag"><span class="dot"></span></figcaption>
-        </figure>
-        <div class="contact-block">
-          <div class="eyebrow">FOUNDED</div>
-          <div class="contact-line">Canberra 2006</div>
-        </div>
-        <div class="contact-block">
-          <div class="eyebrow">RECOGNITION</div>
-          <div class="contact-line">BRW Fast 100</div>
-        </div>
-        <div class="contact-block">
-          <div class="eyebrow">EMAIL</div>
-          <a href="mailto:contact@delv.com" class="contact-line" style="color:var(--blue);">contact@delv.com</a>
-        </div>
-        <div class="contact-block">
-          <div class="eyebrow">RESPONSE TIME</div>
-          <div class="contact-line" style="font-size: 16px; font-weight: 500;">Within one business day</div>
-          <p class="mono" style="font-size: 12px; color: var(--ink-mute); margin-top: 8px;">From a senior DELV Group team member.</p>
+        <!-- Network SVG card -->
+        <div class="contact-network-card">
+          <img src="assets/images/contact-network.svg" alt="DELV AI network" style="display:block;width:100%;">
         </div>
 
+        <!-- Stats row -->
+        <div class="contact-stats">
+          <div class="contact-block">
+            <div class="eyebrow">FOUNDED</div>
+            <div class="contact-line">Canberra<br>2006</div>
+          </div>
+          <div class="contact-block">
+            <div class="eyebrow">RECOGNITION</div>
+            <div class="contact-line">BRW<br>Fast 100</div>
+          </div>
+        </div>
+
+        <!-- Email -->
+        <div class="contact-block">
+          <div class="eyebrow">REACH US</div>
+          <a href="mailto:contact@delv.com" class="contact-email">contact@delv.com</a>
+        </div>
+
+        <!-- Response -->
+        <div class="contact-block">
+          <div class="eyebrow">RESPONSE TIME</div>
+          <div class="contact-line-sm">Within one business day from a senior DELV Group team member.</div>
+        </div>
+
+        <!-- What to expect -->
         <div class="contact-block expect">
           <div class="eyebrow">WHAT TO EXPECT</div>
           <ul>
@@ -1134,7 +1157,7 @@ p { font-size: 15px; line-height: 1.65; }
         </div>
       </aside>
 
-      <!-- Form toggle -->
+      <!-- Form area -->
       <div id="form-toggle-area">
         <button type="button" class="form-toggle-btn" id="form-toggle-btn" onclick="toggleContactForm()">
           <span class="ftb-icon">
@@ -1226,13 +1249,93 @@ p { font-size: 15px; line-height: 1.65; }
 </section>
 
 <style>
-  .contact-side { position: sticky; top: 96px; display: flex; flex-direction: column; gap: 32px; }
-  .contact-block .contact-line { font-size: 22px; font-weight: 500; margin-top: 10px; display: block; letter-spacing: -0.01em; }
-  .contact-block.expect ul { list-style: none; margin: 14px 0 0; padding: 0; }
-  .contact-block.expect li { padding: 10px 0 10px 22px; font-size: 14px; color: var(--ink-soft); border-bottom: 1px solid var(--line); position: relative; }
+  /* ── Contact aside ── */
+  .contact-network-card {
+    border: 1px solid var(--line);
+    border-radius: var(--radius);
+    overflow: hidden;
+    line-height: 0;
+  }
+  .contact-network-card img { width: 100%; display: block; }
+  .contact-side {
+    position: sticky;
+    top: 96px;
+    display: flex;
+    flex-direction: column;
+    gap: 28px;
+  }
+  .contact-stats {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1px;
+    background: var(--line);
+    border: 1px solid var(--line);
+    border-radius: var(--radius);
+    overflow: hidden;
+  }
+  .contact-stats .contact-block {
+    background: var(--bg-elev);
+    padding: 18px 16px;
+    margin: 0;
+  }
+  .contact-block { border-top: 1px solid var(--line); padding-top: 20px; }
+  .contact-stats .contact-block { border-top: none; }
+  .contact-block .contact-line {
+    font-size: 20px;
+    font-weight: 500;
+    margin-top: 8px;
+    display: block;
+    letter-spacing: -0.01em;
+    line-height: 1.25;
+  }
+  .contact-block .contact-line-sm {
+    font-size: 14px;
+    color: var(--ink-soft);
+    margin-top: 8px;
+    line-height: 1.6;
+  }
+  .contact-email {
+    display: block;
+    margin-top: 8px;
+    font-size: 17px;
+    font-weight: 600;
+    color: var(--blue);
+    letter-spacing: -0.01em;
+    text-decoration: none;
+    transition: opacity .2s;
+  }
+  .contact-email:hover { opacity: .75; }
+  .contact-block.expect ul { list-style: none; margin: 12px 0 0; padding: 0; }
+  .contact-block.expect li {
+    padding: 9px 0 9px 20px;
+    font-size: 13px;
+    color: var(--ink-soft);
+    border-bottom: 1px solid var(--line);
+    position: relative;
+  }
   .contact-block.expect li::before { content: '→'; position: absolute; left: 0; color: var(--blue); font-family: 'JetBrains Mono', monospace; }
   .contact-block.expect li:last-child { border-bottom: none; }
-  @media (max-width: 900px) { .contact-grid { grid-template-columns: 1fr !important; gap: 40px !important; } .contact-side { position: static; } }
+
+  /* ── Form toggle area with SVG background ── */
+  #form-toggle-area {
+    position: relative;
+    border: 1px solid var(--line);
+    border-radius: var(--radius);
+    overflow: hidden;
+    padding: 48px 36px 36px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0;
+  }
+#form-toggle-area > * { position: relative; z-index: 1; }
+  .form-collapsible { width: 100%; }
+
+  @media (max-width: 900px) {
+    .contact-grid { grid-template-columns: 1fr !important; gap: 40px !important; }
+    .contact-side { position: static; }
+    #form-toggle-area { padding: 32px 20px 24px; }
+  }
 </style>
 
 <div id="footer-slot"></div>

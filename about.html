@@ -150,7 +150,7 @@ section { padding: clamp(64px, 9vw, 128px) 0; position: relative; }
   border-bottom: 1px solid var(--line-strong);
   border-radius: 0;
 }
-.btn-ghost:hover { color: var(--blue); border-color: var(--blue); }
+.btn-ghost:hover { color: var(--blue); border-bottom-color: var(--blue); }
 
 .btn-blue { background: var(--blue); color: #fff; }
 .btn-blue:hover { background: #3d9bcb; }
@@ -618,7 +618,7 @@ footer.foot {
     linear-gradient(135deg, rgba(241,94,46,0.10), rgba(241,94,46,0.02) 40%),
     rgba(36, 42, 52, 0.6);
   border-radius: var(--radius);
-  padding: clamp(32px, 4vw, 56px);
+  padding: clamp(20px, 2.5vw, 36px);
   position: relative;
   overflow: hidden;
 }
@@ -745,7 +745,7 @@ footer.foot {
   background: var(--bg-elev);
   border: 1px solid var(--line);
   border-radius: var(--radius);
-  padding: clamp(28px, 4vw, 44px);
+  padding: clamp(20px, 2.5vw, 32px);
 }
 .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 18px; }
 .form label {
@@ -932,13 +932,23 @@ footer.foot {
 .anim-d4 { animation-delay: .45s; }
 .anim-d5 { animation-delay: .6s; }
 
-/* ───── Typography polish ───── */
-h1 { font-size: clamp(38px, 5.5vw, 72px); font-weight: 500; letter-spacing: -0.025em; line-height: 1.05; }
-h2 { font-size: clamp(28px, 3.8vw, 52px); font-weight: 500; letter-spacing: -0.02em; line-height: 1.08; }
-h3 { font-size: clamp(20px, 2.2vw, 28px); font-weight: 500; letter-spacing: -0.015em; line-height: 1.2; }
-h4 { font-size: 17px; font-weight: 600; letter-spacing: -0.01em; }
-.lead { font-size: clamp(16px, 1.4vw, 20px); line-height: 1.6; }
-p { font-size: 15px; line-height: 1.65; }
+/* ───── Typography — scaled down ───── */
+h1 { font-size: clamp(26px, 3.2vw, 48px) !important; font-weight: 500; letter-spacing: -0.025em; line-height: 1.08; }
+h2 { font-size: clamp(22px, 2.4vw, 36px) !important; font-weight: 500; letter-spacing: -0.02em; line-height: 1.1; }
+h3 { font-size: clamp(16px, 1.4vw, 20px) !important; font-weight: 500; letter-spacing: -0.01em; line-height: 1.25; }
+h4 { font-size: 14px !important; font-weight: 600; letter-spacing: -0.005em; }
+.lead { font-size: clamp(14px, 1.1vw, 16px) !important; line-height: 1.65; }
+p { font-size: 14px; line-height: 1.65; }
+
+/* Section padding — tighter */
+section { padding: clamp(40px, 5vw, 80px) 0 !important; }
+.section-tight { padding: clamp(28px, 3.5vw, 56px) 0 !important; }
+.hero { padding: clamp(56px, 7vw, 96px) 0 clamp(36px, 4vw, 64px) !important; }
+
+/* Card — tighter padding */
+.card { padding: 22px !important; }
+.card h3 { font-size: clamp(15px, 1.2vw, 18px) !important; margin-bottom: 8px; }
+.card p   { font-size: 13px; line-height: 1.6; }
 
 /* Standardise eyebrow label size */
 .eyebrow {
@@ -946,33 +956,42 @@ p { font-size: 15px; line-height: 1.65; }
   letter-spacing: 0.18em !important;
 }
 
-/* Consistent mono labels (cred items, etc.) */
+/* Consistent mono labels */
 .cred-item {
-  font-size: 11px !important;
-  letter-spacing: 0.1em !important;
+  font-size: 10px !important;
+  letter-spacing: 0.08em !important;
+  padding: 18px 14px !important;
 }
 .cred-item span {
   font-size: 9px !important;
 }
 
-/* Card text consistency */
-.card h3 { font-size: clamp(18px, 1.8vw, 24px); }
-.card p   { font-size: 14px; line-height: 1.6; }
-
-/* Section header consistency */
-.section-head h2 { margin-top: 12px; }
-.section-head p  { font-size: 15px; line-height: 1.65; }
+/* Section header */
+.section-head { margin-bottom: 36px !important; }
+.section-head h2 { margin-top: 10px; }
+.section-head p  { font-size: 14px; line-height: 1.65; }
 
 /* Nav link size lock */
-.nav-links a { font-size: 13.5px; }
-.nav-cta .btn { font-size: 13px; }
+.nav-links a { font-size: 13px; }
+.nav-cta .btn { font-size: 12.5px; padding: 9px 16px !important; }
+/* FIX: prevent Services dropdown chevron wrapping to next line */
+.has-drop > a { white-space: nowrap; }
 
 /* Footer text consistency */
 .foot-col a { font-size: 13px; }
 .foot-col h5 { font-size: 10px !important; letter-spacing: 0.18em !important; }
-.foot-brand .tag-line { font-size: 18px; }
+.foot-brand .tag-line { font-size: 16px !important; }
 .foot-brand .sub { font-size: 13px; }
 .foot-bot { font-size: 10px !important; }
+
+/* Op layer cells */
+.op-cell { padding: 20px !important; min-height: 130px !important; }
+.op-cell h4 { font-size: 15px !important; }
+.op-cell p  { font-size: 12px !important; }
+
+/* Insight card */
+.insight-card { padding: 24px !important; min-height: 220px !important; }
+.insight-card h3 { font-size: 18px !important; }
 
 /* ───── Enhanced card hover ───── */
 .card {

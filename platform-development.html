@@ -150,7 +150,7 @@ section { padding: clamp(64px, 9vw, 128px) 0; position: relative; }
   border-bottom: 1px solid var(--line-strong);
   border-radius: 0;
 }
-.btn-ghost:hover { color: var(--blue); border-color: var(--blue); }
+.btn-ghost:hover { color: var(--blue); border-bottom-color: var(--blue); }
 
 .btn-blue { background: var(--blue); color: #fff; }
 .btn-blue:hover { background: #3d9bcb; }
@@ -618,7 +618,7 @@ footer.foot {
     linear-gradient(135deg, rgba(241,94,46,0.10), rgba(241,94,46,0.02) 40%),
     rgba(36, 42, 52, 0.6);
   border-radius: var(--radius);
-  padding: clamp(32px, 4vw, 56px);
+  padding: clamp(20px, 2.5vw, 36px);
   position: relative;
   overflow: hidden;
 }
@@ -745,7 +745,7 @@ footer.foot {
   background: var(--bg-elev);
   border: 1px solid var(--line);
   border-radius: var(--radius);
-  padding: clamp(28px, 4vw, 44px);
+  padding: clamp(20px, 2.5vw, 32px);
 }
 .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 18px; }
 .form label {
@@ -932,13 +932,23 @@ footer.foot {
 .anim-d4 { animation-delay: .45s; }
 .anim-d5 { animation-delay: .6s; }
 
-/* ───── Typography polish ───── */
-h1 { font-size: clamp(38px, 5.5vw, 72px); font-weight: 500; letter-spacing: -0.025em; line-height: 1.05; }
-h2 { font-size: clamp(28px, 3.8vw, 52px); font-weight: 500; letter-spacing: -0.02em; line-height: 1.08; }
-h3 { font-size: clamp(20px, 2.2vw, 28px); font-weight: 500; letter-spacing: -0.015em; line-height: 1.2; }
-h4 { font-size: 17px; font-weight: 600; letter-spacing: -0.01em; }
-.lead { font-size: clamp(16px, 1.4vw, 20px); line-height: 1.6; }
-p { font-size: 15px; line-height: 1.65; }
+/* ───── Typography — scaled down ───── */
+h1 { font-size: clamp(26px, 3.2vw, 48px) !important; font-weight: 500; letter-spacing: -0.025em; line-height: 1.08; }
+h2 { font-size: clamp(22px, 2.4vw, 36px) !important; font-weight: 500; letter-spacing: -0.02em; line-height: 1.1; }
+h3 { font-size: clamp(16px, 1.4vw, 20px) !important; font-weight: 500; letter-spacing: -0.01em; line-height: 1.25; }
+h4 { font-size: 14px !important; font-weight: 600; letter-spacing: -0.005em; }
+.lead { font-size: clamp(14px, 1.1vw, 16px) !important; line-height: 1.65; }
+p { font-size: 14px; line-height: 1.65; }
+
+/* Section padding — tighter */
+section { padding: clamp(40px, 5vw, 80px) 0 !important; }
+.section-tight { padding: clamp(28px, 3.5vw, 56px) 0 !important; }
+.hero { padding: clamp(56px, 7vw, 96px) 0 clamp(36px, 4vw, 64px) !important; }
+
+/* Card — tighter padding */
+.card { padding: 22px !important; }
+.card h3 { font-size: clamp(15px, 1.2vw, 18px) !important; margin-bottom: 8px; }
+.card p   { font-size: 13px; line-height: 1.6; }
 
 /* Standardise eyebrow label size */
 .eyebrow {
@@ -946,33 +956,42 @@ p { font-size: 15px; line-height: 1.65; }
   letter-spacing: 0.18em !important;
 }
 
-/* Consistent mono labels (cred items, etc.) */
+/* Consistent mono labels */
 .cred-item {
-  font-size: 11px !important;
-  letter-spacing: 0.1em !important;
+  font-size: 10px !important;
+  letter-spacing: 0.08em !important;
+  padding: 18px 14px !important;
 }
 .cred-item span {
   font-size: 9px !important;
 }
 
-/* Card text consistency */
-.card h3 { font-size: clamp(18px, 1.8vw, 24px); }
-.card p   { font-size: 14px; line-height: 1.6; }
-
-/* Section header consistency */
-.section-head h2 { margin-top: 12px; }
-.section-head p  { font-size: 15px; line-height: 1.65; }
+/* Section header */
+.section-head { margin-bottom: 36px !important; }
+.section-head h2 { margin-top: 10px; }
+.section-head p  { font-size: 14px; line-height: 1.65; }
 
 /* Nav link size lock */
-.nav-links a { font-size: 13.5px; }
-.nav-cta .btn { font-size: 13px; }
+.nav-links a { font-size: 13px; }
+.nav-cta .btn { font-size: 12.5px; padding: 9px 16px !important; }
+/* FIX: prevent Services dropdown chevron wrapping to next line */
+.has-drop > a { white-space: nowrap; }
 
 /* Footer text consistency */
 .foot-col a { font-size: 13px; }
 .foot-col h5 { font-size: 10px !important; letter-spacing: 0.18em !important; }
-.foot-brand .tag-line { font-size: 18px; }
+.foot-brand .tag-line { font-size: 16px !important; }
 .foot-brand .sub { font-size: 13px; }
 .foot-bot { font-size: 10px !important; }
+
+/* Op layer cells */
+.op-cell { padding: 20px !important; min-height: 130px !important; }
+.op-cell h4 { font-size: 15px !important; }
+.op-cell p  { font-size: 12px !important; }
+
+/* Insight card */
+.insight-card { padding: 24px !important; min-height: 220px !important; }
+.insight-card h3 { font-size: 18px !important; }
 
 /* ───── Enhanced card hover ───── */
 .card {
@@ -1097,7 +1116,7 @@ p { font-size: 15px; line-height: 1.65; }
 
 <section class="section-tight" data-screen-label="Platform / Photo">
   <div class="wrap">
-    <figure class="media-frame" style="aspect-ratio:16/9;">
+    <figure class="media-frame" style="aspect-ratio:21/9; max-height:420px; overflow:hidden;">
       <img
         src="assets/images/meth.png"
         alt="A DELV-built platform in use — dashboards, live data and connected workflows"
@@ -1116,17 +1135,31 @@ p { font-size: 15px; line-height: 1.65; }
 <section class="section-tight" data-screen-label="Platform / Hooks">
   <div class="wrap">
     <div class="grid grid-3">
-      <div class="hook-card"><div class="q">?</div><h4>An idea to validate before building?</h4></div>
-      <div class="hook-card"><div class="q">?</div><h4>Inherited a platform that underperforms?</h4></div>
-      <div class="hook-card"><div class="q">?</div><h4>Need an MVP that scales into a real product?</h4></div>
+      <div class="hook-card"><div class="q"><svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="11" cy="11" r="9.5" stroke="currentColor" stroke-width="1.4"/><path d="M8.75 9C8.75 7.76 9.76 6.75 11 6.75C12.24 6.75 13.25 7.76 13.25 9C13.25 10 12.65 10.86 11.78 11.25C11.3 11.46 11 11.94 11 12.45V13.25" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/><circle cx="11" cy="15.5" r="0.8" fill="currentColor"/></svg></div><h4>An idea to validate before building?</h4></div>
+      <div class="hook-card"><div class="q"><svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="11" cy="11" r="9.5" stroke="currentColor" stroke-width="1.4"/><path d="M8.75 9C8.75 7.76 9.76 6.75 11 6.75C12.24 6.75 13.25 7.76 13.25 9C13.25 10 12.65 10.86 11.78 11.25C11.3 11.46 11 11.94 11 12.45V13.25" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/><circle cx="11" cy="15.5" r="0.8" fill="currentColor"/></svg></div><h4>Inherited a platform that underperforms?</h4></div>
+      <div class="hook-card"><div class="q"><svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="11" cy="11" r="9.5" stroke="currentColor" stroke-width="1.4"/><path d="M8.75 9C8.75 7.76 9.76 6.75 11 6.75C12.24 6.75 13.25 7.76 13.25 9C13.25 10 12.65 10.86 11.78 11.25C11.3 11.46 11 11.94 11 12.45V13.25" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/><circle cx="11" cy="15.5" r="0.8" fill="currentColor"/></svg></div><h4>Need an MVP that scales into a real product?</h4></div>
     </div>
   </div>
 </section>
 
 <style>
-  .hook-card { padding: 28px; border: 1px solid var(--line); border-radius: var(--radius); background: rgba(0,0,0,0.15); }
-  .hook-card .q { font-family: 'JetBrains Mono', monospace; font-size: 24px; color: var(--blue); margin-bottom: 12px; }
-  .hook-card h4 { font-size: 17px; line-height: 1.35; font-weight: 500; }
+  .hook-card {
+    padding: 24px 24px 22px;
+    border: 1px solid var(--line);
+    border-radius: var(--radius);
+    background: rgba(0,0,0,0.12);
+    transition: border-color .2s, background .2s;
+  }
+  .hook-card:hover { border-color: var(--blue); background: rgba(0,0,0,0.2); }
+  .hook-card .q {
+    display: flex; align-items: center; justify-content: center;
+    width: 36px; height: 36px;
+    border-radius: 50%;
+    border: 1.5px solid rgba(var(--blue-rgb,60,130,255),.35);
+    color: var(--blue);
+    margin-bottom: 14px;
+  }
+  .hook-card h4 { font-size: 14px !important; line-height: 1.45; font-weight: 500; color: var(--ink-mute); }
 </style>
 
 <section data-screen-label="Platform / What">
