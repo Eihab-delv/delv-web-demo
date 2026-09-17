@@ -796,3 +796,76 @@ footer.foot {
 .mt-3 { margin-top: 36px; }
 .mt-4 { margin-top: 56px; }
 .no-pad-top { padding-top: 0 !important; }
+
+/* ── Unified media frame ─────────────────────────── */
+.media-frame {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  border-radius: var(--radius);
+  background: #0a0e17;
+  margin: 0;
+  display: block;
+}
+.media-frame img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  display: block;
+}
+.media-frame .mf-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, rgba(0,0,0,.40) 0%, transparent 55%);
+  pointer-events: none;
+}
+.media-frame .mf-caption {
+  position: absolute;
+  bottom: 0; left: 0; right: 0;
+  padding: 16px 24px 18px;
+  margin: 0;
+}
+.media-frame .mf-desc {
+  font-size: 13px;
+  color: rgba(255,255,255,.65);
+  margin: 0;
+  line-height: 1.5;
+  max-width: 60ch;
+}
+.media-frame .mf-tag {
+  position: absolute;
+  top: 16px; right: 18px;
+  margin: 0;
+  line-height: 1;
+}
+.media-frame .mf-tag .dot {
+  display: inline-block;
+  width: 8px; height: 8px;
+  border-radius: 50%;
+  background: var(--blue);
+  box-shadow: 0 0 6px var(--blue);
+}
+/* aspect-ratio helpers — set on the figure itself */
+.mf-21x9 { aspect-ratio: 21/9; }
+.mf-16x9 { aspect-ratio: 16/9; }
+.mf-3x1  { aspect-ratio: 3/1;  }
+/* cap tall on small screens */
+@media (max-width: 768px) {
+  .media-frame { max-height: none !important; }
+  .mf-21x9 { aspect-ratio: 16/9; }
+}
+
+/* ── Full-bleed photo band ────────────────────────── */
+.photo-band {
+  padding: 0 !important;
+}
+.photo-band .media-frame {
+  border-radius: 0;
+  max-height: 480px;
+}
+@media (min-width: 769px) {
+  .photo-band .media-frame { max-height: 520px; }
+}

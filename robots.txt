@@ -1,0 +1,9 @@
+User-agent: *
+Allow: /
+
+# Exclude hidden/draft pages
+Disallow: /insights.html
+Disallow: /index.old.html
+Disallow: /offline/
+
+Sitemap: https://www.delv.group/sitemap.xml
