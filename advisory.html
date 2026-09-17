@@ -112,6 +112,7 @@
 
 * { box-sizing: border-box; }
 
+html { overflow-x: clip; }
 html, body {
   margin: 0;
   padding: 0;
@@ -1305,6 +1306,34 @@ section { padding: clamp(40px, 5vw, 80px) 0 !important; }
   </div>
 </section>
 
+<section data-screen-label="Home / AdvisoryPartner" style="background: var(--bg-elev); border-top: 1px solid var(--line); border-bottom: 1px solid var(--line);">
+  <div class="wrap">
+    <div style="display:grid; grid-template-columns: 1fr 1.1fr; gap: clamp(40px, 6vw, 80px); align-items: start;" class="advisory-grid">
+      <div>
+        <div class="eyebrow">ONGOING ENGAGEMENT</div>
+        <h2 style="margin-top:18px;">AI Advisory &amp; Execution Partner</h2>
+        <p class="lead" style="margin-top:20px;">We stay with you beyond strategy — helping your team execute, refine and scale AI across the business.</p>
+        <div style="margin-top: 32px; padding: 24px; background: var(--bg); border: 1px solid var(--blue); border-radius: var(--radius);">
+          <div style="font-family:'JetBrains Mono',monospace; font-size:11px; color: var(--blue); letter-spacing:0.14em; margin-bottom:10px;">RETAINER</div>
+          <div style="font-size: clamp(28px, 3.5vw, 42px); font-weight: 700; color: var(--ink); letter-spacing:-0.02em;">From AUD $12,500<span style="font-size:18px; font-weight:500;">/month</span></div>
+          <p style="margin-top:10px; font-size:13px; color:var(--ink-mute);">Ongoing support. Strategic partnership. Real execution.</p>
+          <a href="contact.html" class="btn btn-blue" style="margin-top:20px; width:100%; justify-content:center;">Talk to DELV <span class="arrow">→</span></a>
+        </div>
+      </div>
+      <div>
+        <div style="font-family:'JetBrains Mono',monospace; font-size:10px; color:var(--ink-mute); letter-spacing:0.16em; text-transform:uppercase; margin-bottom:20px;">WHAT WE DO TOGETHER</div>
+        <ul class="advisory-list">
+          <li>AI roadmap execution</li>
+          <li>Tool and vendor selection</li>
+          <li>Pilot delivery support</li>
+          <li>Leadership guidance</li>
+          <li>Ongoing optimisation</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
 <section data-screen-label="Advisory / Why" style="background: #161a21; border-top: 1px solid var(--line); border-bottom: 1px solid var(--line);">
   <div class="wrap">
     <div style="display:grid; grid-template-columns: 1fr 1.2fr; gap: 80px; align-items: start;" class="two-col">
@@ -1322,6 +1351,13 @@ section { padding: clamp(40px, 5vw, 80px) 0 !important; }
 
 <style>
   @media (max-width: 900px) { .two-col { grid-template-columns: 1fr !important; gap: 32px !important; } }
+
+/* ─── Advisory Partner section ─── */
+.advisory-list { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 0; }
+.advisory-list li { padding: 16px 0 16px 24px; border-bottom: 1px solid var(--line); font-size: 15px; color: var(--ink-soft); position: relative; }
+.advisory-list li::before { content: ''; position: absolute; left: 0; top: 50%; transform: translateY(-50%); width: 8px; height: 8px; border: 1.5px solid var(--blue); border-radius: 50%; }
+.advisory-list li:first-child { border-top: 1px solid var(--line); }
+@media (max-width: 800px) { .advisory-grid { grid-template-columns: 1fr !important; } }
 </style>
 
 <section class="cta-banner">

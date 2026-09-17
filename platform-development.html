@@ -112,6 +112,7 @@
 
 * { box-sizing: border-box; }
 
+html { overflow-x: clip; }
 html, body {
   margin: 0;
   padding: 0;
@@ -1230,6 +1231,23 @@ section { padding: clamp(40px, 5vw, 80px) 0 !important; }
     margin-bottom: 14px;
   }
   .hook-card h4 { font-size: 14px !important; line-height: 1.45; font-weight: 500; color: var(--ink-mute); }
+
+/* ─── AI Apps section ─── */
+.ai-app-visual { background: var(--bg-elev); border: 1px solid var(--line-strong); border-radius: var(--radius-lg); overflow: hidden; }
+.aav-header { display: flex; align-items: center; gap: 12px; padding: 14px 20px; border-bottom: 1px solid var(--line); background: rgba(0,0,0,0.2); }
+.aav-dot { width: 8px; height: 8px; border-radius: 50%; background: var(--orange); box-shadow: 0 0 8px var(--orange); flex: none; }
+.aav-status { margin-left: auto; font-family: 'JetBrains Mono', monospace; font-size: 10px; color: #4ade80; letter-spacing: 0.12em; }
+.aav-body { padding: 12px; display: flex; flex-direction: column; gap: 8px; }
+.aav-agent { display: flex; align-items: center; gap: 14px; padding: 14px 16px; background: rgba(255,255,255,0.03); border: 1px solid var(--line); border-radius: var(--radius); transition: all .2s var(--t); }
+.aav-agent:hover { background: rgba(50,136,181,0.07); border-color: var(--line-strong); }
+.aav-agent-icon { font-size: 22px; flex: none; }
+.aav-agent-info { flex: 1; min-width: 0; }
+.aav-badge { margin-left: auto; font-family: 'JetBrains Mono', monospace; font-size: 10px; letter-spacing: 0.1em; padding: 4px 8px; border-radius: 2px; flex: none; }
+.aav-badge--active { color: #4ade80; background: rgba(74,222,128,0.1); border: 1px solid rgba(74,222,128,0.25); }
+.aav-badge--idle { color: var(--ink-mute); background: rgba(255,255,255,0.04); border: 1px solid var(--line); }
+.aav-footer { display: flex; align-items: center; justify-content: space-between; padding: 12px 20px; border-top: 1px solid var(--line); background: rgba(0,0,0,0.15); }
+.aiapps-grid > div { min-width: 0; }
+@media (max-width: 800px) { .aiapps-grid { grid-template-columns: 1fr !important; } }
 </style>
 
 <section data-screen-label="Platform / What">
@@ -1267,6 +1285,72 @@ section { padding: clamp(40px, 5vw, 80px) 0 !important; }
       <p style="max-width:56ch">Our 48 Hour Prototype turns your concept into something tangible in two business days — enough to show stakeholders, gather feedback and build momentum before a larger investment.</p>
       <div class="hero-actions" style="position:relative; z-index:1;">
         <a href="48-hour-prototype.html" class="btn btn-primary">Test an idea in 48 hours <span class="arrow">→</span></a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section data-screen-label="Home / AIApps">
+  <div class="wrap">
+    <div style="display:grid; grid-template-columns: 1fr 1fr; gap: clamp(40px, 6vw, 80px); align-items: center;" class="aiapps-grid">
+      <div>
+        <div class="eyebrow">AI APP DEVELOPMENT</div>
+        <h2 style="margin-top:18px;">AI-Infused Apps. Built Fast. Designed Right.</h2>
+        <p class="lead" style="margin-top:20px;">We build mobile apps and platforms powered by AI and designed for how people expect to use technology today.</p>
+        <p style="margin-top:16px;"><strong style="color:var(--ink);">Fast. Simple. Intelligent.</strong></p>
+        <p>From MVPs to enterprise platforms, we combine human-centred design, AI capability and full-stack development to deliver products that feel effortless.</p>
+        <div class="hero-actions" style="margin-top:28px;">
+          <a href="platform-development.html" class="btn btn-primary">Build My App <span class="arrow">→</span></a>
+          <a href="contact.html" class="btn btn-secondary">Talk to DELV</a>
+        </div>
+      </div>
+      <div>
+        <!-- AI App Visual -->
+        <div class="ai-app-visual">
+          <div class="aav-header">
+            <span class="aav-dot"></span>
+            <span style="font-family:'JetBrains Mono',monospace; font-size:11px; color:var(--ink-mute); letter-spacing:0.12em;">AI ASSISTANT</span>
+            <span class="aav-status">● LIVE</span>
+          </div>
+          <div class="aav-body">
+            <div class="aav-agent">
+              <div class="aav-agent-icon">🤖</div>
+              <div class="aav-agent-info">
+                <div style="font-weight:600; font-size:14px;">CFO Agent</div>
+                <div style="font-size:12px; color:var(--ink-mute);">Financial intelligence layer</div>
+              </div>
+              <div class="aav-badge aav-badge--active">Active</div>
+            </div>
+            <div class="aav-agent">
+              <div class="aav-agent-icon">💼</div>
+              <div class="aav-agent-info">
+                <div style="font-weight:600; font-size:14px;">Sales Agent</div>
+                <div style="font-size:12px; color:var(--ink-mute);">Pipeline &amp; deal intelligence</div>
+              </div>
+              <div class="aav-badge aav-badge--active">Active</div>
+            </div>
+            <div class="aav-agent">
+              <div class="aav-agent-icon">🎧</div>
+              <div class="aav-agent-info">
+                <div style="font-weight:600; font-size:14px;">Support Agent</div>
+                <div style="font-size:12px; color:var(--ink-mute);">Customer resolution AI</div>
+              </div>
+              <div class="aav-badge aav-badge--active">Active</div>
+            </div>
+            <div class="aav-agent">
+              <div class="aav-agent-icon">📅</div>
+              <div class="aav-agent-info">
+                <div style="font-weight:600; font-size:14px;">Booking App</div>
+                <div style="font-size:12px; color:var(--ink-mute);">AI-powered scheduling</div>
+              </div>
+              <div class="aav-badge aav-badge--idle">Idle</div>
+            </div>
+          </div>
+          <div class="aav-footer">
+            <span style="font-family:'JetBrains Mono',monospace; font-size:10px; color:var(--ink-mute);">4 agents running · 0 errors</span>
+            <span style="font-family:'JetBrains Mono',monospace; font-size:10px; color:var(--blue);">VIEW DASHBOARD →</span>
+          </div>
+        </div>
       </div>
     </div>
   </div>

@@ -1155,10 +1155,12 @@ section { padding: clamp(40px, 5vw, 80px) 0 !important; }
 </head>
 <body>
 <div id="nav-slot"></div>
-<header class="hero" data-screen-label="Contact / Hero">
+<header class="hero" data-screen-label="Contact / Hero" style="position:relative;overflow:hidden;">
   <div class="hero-grid"></div>
   <div class="hero-glow"></div>
-  <div class="wrap hero-inner">
+  <img src="assets/images/delv-robotics-solar-robot.jpg" alt="" aria-hidden="true"
+       style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center top;opacity:0.13;pointer-events:none;z-index:0;">
+  <div class="wrap hero-inner" style="position:relative;z-index:1;">
     <div class="eyebrow">CONTACT</div>
     <h1 style="margin-top:20px;">Let's talk about<br><span style="color:var(--blue)">what you're building.</span></h1>
     <p class="lead">Platform, AI deployment, robotics pilot or a technology decision — start with a conversation and we'll tell you exactly what we'd do.</p>
@@ -1167,60 +1169,9 @@ section { padding: clamp(40px, 5vw, 80px) 0 !important; }
 
 <section style="padding-top: 0;" data-screen-label="Contact / Form">
   <div class="wrap">
-    <div style="display:grid; grid-template-columns: 1fr 1.5fr; gap: 56px; align-items: start;" class="contact-grid">
-
-      <aside class="contact-side">
-        <!-- Network SVG card -->
-        <div class="contact-network-card">
-          <img src="assets/images/contact-network.svg" alt="DELV AI network" style="display:block;width:100%;">
-        </div>
-
-        <!-- Stats row -->
-        <div class="contact-stats">
-          <div class="contact-block">
-            <div class="eyebrow">FOUNDED</div>
-            <div class="contact-line">Canberra<br>2006</div>
-          </div>
-          <div class="contact-block">
-            <div class="eyebrow">RECOGNITION</div>
-            <div class="contact-line">BRW<br>Fast 100</div>
-          </div>
-        </div>
-
-        <!-- Email -->
-        <div class="contact-block">
-          <div class="eyebrow">REACH US</div>
-          <a href="mailto:contact@delv.com" class="contact-email">contact@delv.com</a>
-        </div>
-
-        <!-- Response -->
-        <div class="contact-block">
-          <div class="eyebrow">RESPONSE TIME</div>
-          <div class="contact-line-sm">Within one business day from a senior DELV Group team member.</div>
-        </div>
-
-        <!-- What to expect -->
-        <div class="contact-block expect">
-          <div class="eyebrow">WHAT TO EXPECT</div>
-          <ul>
-            <li>A response from a senior DELV Group team member</li>
-            <li>No pressure, no scripts — a real conversation</li>
-            <li>Practical guidance, even at the enquiry stage</li>
-          </ul>
-        </div>
-      </aside>
-
-      <!-- Form area -->
-      <div id="form-toggle-area">
-        <button type="button" class="form-toggle-btn" id="form-toggle-btn" onclick="toggleContactForm()">
-          <span class="ftb-icon">
-            <svg width="14" height="14" viewBox="0 0 14 14" fill="none">
-              <path d="M7 1v12M1 7h12" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
-            </svg>
-          </span>
-          Get In Touch — We'd love to hear from you
-        </button>
-        <div class="form-collapsible" id="form-collapsible">
+    <div class="contact-form-full">
+      <div class="eyebrow" style="margin-bottom:12px;">GET IN TOUCH</div>
+      <h2 style="margin-bottom:32px;">We’d love to hear from you</h2>
       <form class="form" id="contact-form" action="https://formspree.io/f/YOUR_FORMSPREE_ID" method="POST">
         <div class="form-row">
           <div><label for="fn">First name</label><input id="fn" name="first_name" type="text" required placeholder="Alex" /></div>
@@ -1295,14 +1246,17 @@ section { padding: clamp(40px, 5vw, 80px) 0 !important; }
         });
       })();
       </script>
-        </div><!-- /form-collapsible -->
-      </div><!-- /form-toggle-area -->
     </div>
   </div>
 </section>
 
 <style>
-  /* ── Contact aside ── */
+  /* ── Contact form full-width ── */
+  .contact-form-full {
+    max-width: 780px;
+    margin: 0 auto;
+  }
+  /* ── Contact aside (kept for reference, hidden) ── */
   .contact-network-card {
     border: 1px solid var(--line);
     border-radius: var(--radius);

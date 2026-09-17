@@ -92,6 +92,7 @@
 
 * { box-sizing: border-box; }
 
+html { overflow-x: clip; }
 html, body {
   margin: 0;
   padding: 0;
@@ -1230,6 +1231,159 @@ section { padding: clamp(40px, 5vw, 80px) 0 !important; }
   </div>
 </section>
 
+<section data-screen-label="Home / Legacy" style="background: #161a21; border-top: 1px solid var(--line);">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="col-l">
+        <div class="eyebrow">OUR EXPERIENCE</div>
+        <h2>Twenty Years of Technology Delivery.</h2>
+      </div>
+      <p style="max-width:480px">Our foundation in enterprise mobility, security and managed services gives DELV unique credibility when it comes to deploying AI in complex, high-stakes environments.</p>
+    </div>
+
+    <div class="grid grid-3">
+      <div class="card">
+        <div class="card-num">HERITAGE</div>
+        <h3>Enterprise Mobility Pioneer</h3>
+        <p>DELV began as one of Australia's leading enterprise mobility and MDM/EMM/UEM specialists — managing thousands of devices for government and enterprise clients.</p>
+      </div>
+      <div class="card">
+        <div class="card-num">RECOGNITION</div>
+        <h3>BRW Fast 100</h3>
+        <p>Recognised as one of Australia's fastest-growing technology companies. A track record of delivery, not just ambition.</p>
+      </div>
+      <div class="card">
+        <div class="card-num">EVOLUTION</div>
+        <h3>From Managed Services to AI</h3>
+        <p>From BlackBerry and device management to platforms, AI and intelligent apps — DELV has continuously evolved to stay at the frontier of what organisations need.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section data-screen-label="About / EvoTimeline" style="background: var(--bg-elev); border-top: 1px solid var(--line); border-bottom: 1px solid var(--line);">
+  <div class="wrap">
+    <div class="evo">
+      <div class="evo-legend">
+        <span><i class="m-add"></i>Live &amp; growing today</span>
+        <span class="grow"></span>
+        <span class="hint">One backbone, branching wider with every era &mdash; everything still powers our work</span>
+      </div>
+      <div class="evo-svg-wrap">
+        <svg viewBox="0 0 1240 440" preserveAspectRatio="xMidYMid meet" role="img" aria-label="How DELV has grown: a consulting backbone that keeps branching into new capability streams, all live today.">
+          <!-- today marker -->
+          <line x1="1130" y1="36" x2="1130" y2="392" stroke="var(--line-strong)" stroke-width="1" stroke-dasharray="3 6"/>
+          <text class="evo-now" x="1130" y="26" text-anchor="middle">TODAY</text>
+
+          <!-- growth axis -->
+          <line x1="150" y1="414" x2="1112" y2="414" stroke="var(--line)" stroke-width="1"/>
+          <path d="M1112 414 l-9 -4 l0 8 z" fill="var(--ink-mute)"/>
+          <text class="evo-cap" x="150" y="432">FOUNDATIONS</text>
+          <text class="evo-cap" x="1112" y="432" text-anchor="end">TWO DECADES OF GROWTH</text>
+
+          <!-- ===== branches (casing first, then colour, then flow) ===== -->
+
+          <!-- Managed services & security (down, from era 3) -->
+          <path d="M470 215 C540 215 540 285 620 285 L1130 285" fill="none" stroke="#151920" stroke-width="7"/>
+          <path d="M470 215 C540 215 540 285 620 285 L1130 285" fill="none" stroke="var(--blue)" stroke-width="2" opacity="0.4"/>
+          <path d="M470 215 C540 215 540 285 620 285 L1130 285" fill="none" stroke="var(--blue)" stroke-width="2" class="flow" style="animation-delay:-2s"/>
+
+          <!-- AI services (down, newest, from era 6) -->
+          <path d="M980 215 C1030 215 1030 355 1080 355 L1130 355" fill="none" stroke="#151920" stroke-width="7"/>
+          <path d="M980 215 C1030 215 1030 355 1080 355 L1130 355" fill="none" stroke="var(--orange)" stroke-width="2" opacity="0.45"/>
+          <path d="M980 215 C1030 215 1030 355 1080 355 L1130 355" fill="none" stroke="var(--orange)" stroke-width="2" class="flow" style="animation-delay:-3s"/>
+
+          <!-- Platforms & endpoints (up, from era 1, matured) -->
+          <path d="M150 215 C250 215 270 80 380 80 L1130 80" fill="none" stroke="#151920" stroke-width="7"/>
+          <path d="M150 215 C250 215 270 80 380 80 L1130 80" fill="none" stroke="var(--blue)" stroke-width="2" opacity="0.4"/>
+          <path d="M150 215 C250 215 270 80 380 80 L1130 80" fill="none" stroke="var(--blue)" stroke-width="2" class="flow"/>
+
+          <!-- Automation & robotics (up, from era 5) -->
+          <path d="M760 215 C820 215 820 150 890 150 L1130 150" fill="none" stroke="#151920" stroke-width="7"/>
+          <path d="M760 215 C820 215 820 150 890 150 L1130 150" fill="none" stroke="var(--orange)" stroke-width="2" opacity="0.45"/>
+          <path d="M760 215 C820 215 820 150 890 150 L1130 150" fill="none" stroke="var(--orange)" stroke-width="2" class="flow" style="animation-delay:-1.4s"/>
+
+          <!-- Consulting & advisory (the backbone) -->
+          <path d="M150 215 L1130 215" fill="none" stroke="#151920" stroke-width="7"/>
+          <path d="M150 215 L1130 215" fill="none" stroke="var(--blue)" stroke-width="2" opacity="0.4"/>
+          <path d="M150 215 L1130 215" fill="none" stroke="var(--blue)" stroke-width="2" class="flow" style="animation-delay:-0.7s"/>
+
+          <!-- branch-off nodes on the backbone -->
+          <g fill="var(--bg)" stroke="var(--blue)" stroke-width="2">
+            <circle cx="470" cy="215" r="5"/>
+            <circle cx="760" cy="215" r="5"/>
+          </g>
+          <circle cx="980" cy="215" r="5" fill="var(--bg)" stroke="var(--orange)" stroke-width="2"/>
+
+          <!-- origin -->
+          <circle cx="150" cy="215" r="7" fill="var(--blue)"/>
+          <text class="evo-lane-label" x="138" y="211" text-anchor="end">Government</text>
+          <text class="evo-lane-label" x="138" y="227" text-anchor="end">IT consulting</text>
+
+          <!-- ===== pillar labels + today nodes ===== -->
+
+          <!-- Platforms & endpoints -->
+          <text class="evo-lane-label" x="392" y="74">Platforms &amp; endpoints</text>
+          <text class="evo-cap" x="392" y="92">BlackBerry &rarr; MDM &rarr; EMM &rarr; UEM &rarr; platform development</text>
+          <circle class="pulse" cx="1130" cy="80" r="7" fill="none" stroke="var(--blue)" stroke-width="1.5"/>
+          <circle cx="1130" cy="80" r="4.5" fill="var(--blue)"/>
+
+          <!-- Automation & robotics -->
+          <text class="evo-lane-label" x="772" y="144">Automation &amp; robotics</text>
+          <text class="evo-cap" x="772" y="162">intelligent automation &middot; RPA &middot; enterprise robotics</text>
+          <circle class="pulse" cx="1130" cy="150" r="7" fill="none" stroke="var(--orange)" stroke-width="1.5" style="animation-delay:1s"/>
+          <circle cx="1130" cy="150" r="4.5" fill="var(--orange)"/>
+
+          <!-- Consulting & advisory -->
+          <text class="evo-lane-label" x="772" y="208">Consultancy &amp; advisory</text>
+          <text class="evo-cap" x="772" y="234">strategy &middot; AI advisory &amp; policy</text>
+          <circle class="pulse" cx="1130" cy="215" r="7" fill="none" stroke="var(--blue)" stroke-width="1.5" style="animation-delay:.5s"/>
+          <circle cx="1130" cy="215" r="4.5" fill="var(--blue)"/>
+
+          <!-- Managed services & security -->
+          <text class="evo-lane-label" x="632" y="279">Managed services &amp; security</text>
+          <text class="evo-cap" x="632" y="297">managed service provider &middot; mobile &amp; cyber security</text>
+          <circle class="pulse" cx="1130" cy="285" r="7" fill="none" stroke="var(--blue)" stroke-width="1.5" style="animation-delay:1.5s"/>
+          <circle cx="1130" cy="285" r="4.5" fill="var(--blue)"/>
+
+          <!-- AI services -->
+          <text class="evo-lane-label" x="1115" y="349" text-anchor="end">AI services</text>
+          <text class="evo-cap" x="1115" y="367" text-anchor="end">advisory &middot; deployment &amp; management &middot; policy</text>
+          <circle class="pulse" cx="1130" cy="355" r="7" fill="none" stroke="var(--orange)" stroke-width="1.5" style="animation-delay:2s"/>
+          <circle cx="1130" cy="355" r="4.5" fill="var(--orange)"/>
+        </svg>
+      </div>
+
+      <div class="evo-mobile">
+        <ol>
+          <li>
+            <span class="lb">Government IT consulting</span>
+            <span class="ac">Our backbone</span>
+          </li>
+          <li>
+            <span class="lb">Platforms &amp; endpoints</span>
+            <span class="tg evo">BlackBerry &rarr; MDM &rarr; EMM &rarr; UEM</span><span class="tg add">Mobile app &amp; platform development</span>
+          </li>
+          <li>
+            <span class="lb">Managed services &amp; security</span>
+            <span class="tg add">Managed service provider</span><span class="tg add">Mobile &amp; cyber security</span>
+          </li>
+          <li>
+            <span class="lb">Automation &amp; robotics</span>
+            <span class="tg add">Intelligent Automation</span><span class="tg add">RPA</span><span class="tg add">Enterprise robotics</span>
+          </li>
+          <li>
+            <span class="lb">AI services &mdash; today</span>
+            <span class="tg add">AI advisory &amp; policy</span><span class="tg add">AI platform deployment &amp; management</span>
+          </li>
+        </ol>
+      </div>
+
+      <p class="evo-foot"><span class="dot"></span><span><b>One backbone, branching wider every era.</b> From government IT to AI &mdash; each capability we have built still powers our work today.</span></p>
+    </div>
+  </div>
+</section>
+
 <style>
   .evo { display: flex; flex-direction: column; border-left: 1px solid var(--line); margin-left: 12px; }
   .evo-row { display: grid; grid-template-columns: 160px 1fr; gap: 48px; padding: 32px 0 32px 40px; border-bottom: 1px solid var(--line); position: relative; }
@@ -1240,6 +1394,86 @@ section { padding: clamp(40px, 5vw, 80px) 0 !important; }
   .evo-body h3 { margin-bottom: 8px; }
   .evo-body p { margin: 0; }
   @media (max-width: 700px) { .evo-row { grid-template-columns: 1fr; gap: 8px; padding-left: 28px; } .evo-row::before { left: -6px; top: 34px; } }
+
+/* ─── Evo timeline section ─── */
+/* ───── Branching evolution diagram ───── */
+.evo {
+  margin-top: 44px;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  background:
+    radial-gradient(ellipse 60% 130% at 92% 0%, rgba(241,94,46,0.06), transparent 70%),
+    radial-gradient(ellipse 70% 130% at 8% 100%, rgba(50,136,181,0.07), transparent 70%),
+    rgba(0,0,0,0.18);
+  padding: 30px clamp(14px, 3vw, 38px) 24px;
+}
+.evo .evo-svg-wrap { overflow: visible; }
+.evo svg { width: 100%; height: auto; display: block; overflow: visible; }
+.evo .evo-lane-label { font-family: 'JetBrains Mono', monospace; font-size: 11px; font-weight: 500; letter-spacing: 0.02em; fill: var(--ink); }
+.evo .evo-retire-label { font-family: 'JetBrains Mono', monospace; font-size: 10px; letter-spacing: 0.12em; fill: var(--ink-mute); }
+.evo .evo-legend { display: flex; align-items: center; gap: 20px; margin-bottom: 22px; flex-wrap: wrap; font-family: 'JetBrains Mono', monospace; font-size: 10px; letter-spacing: 0.14em; text-transform: uppercase; color: var(--ink-mute); }
+.evo .evo-legend span { display: inline-flex; align-items: center; gap: 8px; }
+.evo .evo-legend i { width: 11px; height: 11px; border-radius: 50%; flex: none; }
+.evo .evo-legend .m-add { background: var(--blue); }
+.evo .evo-legend .m-evo { background: var(--bg); border: 2px solid var(--blue); }
+.evo .evo-legend .m-rem { background: var(--bg); border: 1px solid var(--ink-mute); position: relative; }
+.evo .evo-legend .m-rem::before, .evo .evo-legend .m-rem::after { content: ''; position: absolute; top: 50%; left: 50%; width: 9px; height: 1px; background: var(--ink-mute); }
+.evo .evo-legend .m-rem::before { transform: translate(-50%,-50%) rotate(45deg); }
+.evo .evo-legend .m-rem::after { transform: translate(-50%,-50%) rotate(-45deg); }
+.evo .evo-legend .grow { flex: 1 1 40px; }
+.evo .evo-legend .hint { text-transform: none; letter-spacing: 0.02em; color: var(--ink-mute); opacity: .8; }
+@media (max-width: 760px) { .evo .evo-legend { display: none; } }
+.evo .evo-year { font-family: 'JetBrains Mono', monospace; font-size: 11px; letter-spacing: 0.1em; fill: var(--ink-mute); }
+.evo .evo-cap { font-family: 'JetBrains Mono', monospace; font-size: 9px; letter-spacing: 0.16em; fill: var(--ink-mute); }
+.evo .evo-now { font-family: 'JetBrains Mono', monospace; font-size: 12px; letter-spacing: 0.2em; fill: var(--ink); }
+.evo .flow { stroke-dasharray: 2 14; stroke-linecap: round; animation: evoFlow 5.5s linear infinite; }
+@keyframes evoFlow { to { stroke-dashoffset: -176; } }
+.evo .pulse { transform-box: fill-box; transform-origin: center; animation: fdRing 3.4s var(--t) infinite; }
+.evo .evo-foot {
+  margin: 22px 0 0; padding-top: 18px; border-top: 1px solid var(--line);
+  font-family: 'JetBrains Mono', monospace; font-size: 11px; letter-spacing: 0.04em;
+  color: var(--ink-mute); display: flex; align-items: center; gap: 10px;
+}
+.evo .evo-foot b { color: var(--ink-soft); font-weight: 500; }
+.evo .evo-foot .dot { width: 7px; height: 7px; border-radius: 50%; background: var(--orange); box-shadow: 0 0 8px var(--orange); flex: none; }
+
+/* mobile accumulation rail */
+.evo-mobile { display: none; }
+.evo-mobile ol { list-style: none; margin: 0; padding: 0; position: relative; }
+.evo-mobile ol::before {
+  content: ''; position: absolute; left: 6px; top: 6px; bottom: 30px; width: 2px;
+  background: linear-gradient(to bottom, var(--blue), var(--orange));
+}
+.evo-mobile li { position: relative; padding: 0 0 26px 30px; }
+.evo-mobile li::before {
+  content: ''; position: absolute; left: 0; top: 4px; width: 14px; height: 14px;
+  border-radius: 50%; background: var(--bg); border: 2px solid var(--blue);
+}
+.evo-mobile li:last-child::before { border-color: var(--orange); background: var(--orange); }
+.evo-mobile .ey { font-family: 'JetBrains Mono', monospace; font-size: 10px; letter-spacing: 0.14em; color: var(--ink-mute); }
+.evo-mobile .lb { display: block; font-size: 15px; font-weight: 600; margin-top: 3px; }
+.evo-mobile .tg {
+  display: inline-block; margin: 7px 7px 0 0; font-family: 'JetBrains Mono', monospace;
+  font-size: 10px; letter-spacing: 0.04em; padding: 3px 8px; border-radius: 2px;
+  border: 1px solid var(--line-strong); color: var(--ink-soft);
+}
+.evo-mobile .tg.add { color: var(--blue); border-color: rgba(50,136,181,0.4); }
+.evo-mobile .tg.evo { color: var(--ink); }
+.evo-mobile .tg.rem { color: var(--ink-mute); }
+.evo-mobile .ac {
+  display: inline-block; margin-top: 6px; font-family: 'JetBrains Mono', monospace;
+  font-size: 9px; letter-spacing: 0.14em; color: var(--blue);
+  border: 1px solid var(--line-strong); border-radius: 2px; padding: 2px 7px;
+}
+@media (max-width: 760px) {
+  .evo .evo-svg-wrap { display: none; }
+  .evo-mobile { display: block; }
+}
+@media (max-width: 760px) { .evo .evo-legend { display: none; } }
+@media (max-width: 760px) {
+  .evo .evo-svg-wrap { display: none; }
+  .evo-mobile { display: block; }
+}
 </style>
 
 <section data-screen-label="About / Values" style="background: #161a21; border-top: 1px solid var(--line); border-bottom: 1px solid var(--line);">

@@ -1740,154 +1740,6 @@ section { padding: clamp(40px, 5vw, 80px) 0 !important; }
   @media (max-width: 800px) { .problem-grid { grid-template-columns: 1fr !important; } }
 </style>
 
-<section data-screen-label="Home / Story">
-  <div class="wrap">
-    <div class="section-head">
-      <div class="col-l">
-        <div class="eyebrow">WHO WE ARE</div>
-        <h2>AI That Creates Real Outcomes — Not Just Demos.</h2>
-      </div>
-      <div style="max-width:480px">
-        <p>DELV helps organisations cut through the AI noise and get to what actually matters — real adoption, real productivity and real business outcomes.</p>
-        <p>We combine AI strategy, intelligent app development, agent engineering and platform delivery into one end-to-end capability. Governed, supported and operational.</p>
-        <a href="about.html" class="btn btn-ghost">Read our story <span class="arrow">→</span></a>
-      </div>
-    </div>
-
-    <figure class="media-frame mf-21x9" style="max-height:520px; margin-left:calc(-1*var(--pad)); margin-right:calc(-1*var(--pad)); width:calc(100% + 2*var(--pad)); border-radius:0;">
-      <img
-        src="assets/images/delv-hero-office-robot.jpg"
-        alt="DELV — operational AI and platform capability in a real enterprise environment"
-        loading="lazy"
-        style="object-position:center;"
-      >
-      <div class="mf-overlay"></div>
-      <figcaption class="mf-tag"><span class="dot"></span></figcaption>
-      <figcaption class="mf-caption">
-        <p class="mf-desc">Where emerging technology meets real-world delivery.</p>
-      </figcaption>
-    </figure>
-
-    <div class="evo">
-      <div class="evo-legend">
-        <span><i class="m-add"></i>Live &amp; growing today</span>
-        <span class="grow"></span>
-        <span class="hint">One backbone, branching wider with every era &mdash; everything still powers our work</span>
-      </div>
-      <div class="evo-svg-wrap">
-        <svg viewBox="0 0 1240 440" preserveAspectRatio="xMidYMid meet" role="img" aria-label="How DELV has grown: a consulting backbone that keeps branching into new capability streams, all live today.">
-          <!-- today marker -->
-          <line x1="1130" y1="36" x2="1130" y2="392" stroke="var(--line-strong)" stroke-width="1" stroke-dasharray="3 6"/>
-          <text class="evo-now" x="1130" y="26" text-anchor="middle">TODAY</text>
-
-          <!-- growth axis -->
-          <line x1="150" y1="414" x2="1112" y2="414" stroke="var(--line)" stroke-width="1"/>
-          <path d="M1112 414 l-9 -4 l0 8 z" fill="var(--ink-mute)"/>
-          <text class="evo-cap" x="150" y="432">FOUNDATIONS</text>
-          <text class="evo-cap" x="1112" y="432" text-anchor="end">TWO DECADES OF GROWTH</text>
-
-          <!-- ===== branches (casing first, then colour, then flow) ===== -->
-
-          <!-- Managed services & security (down, from era 3) -->
-          <path d="M470 215 C540 215 540 285 620 285 L1130 285" fill="none" stroke="#151920" stroke-width="7"/>
-          <path d="M470 215 C540 215 540 285 620 285 L1130 285" fill="none" stroke="var(--blue)" stroke-width="2" opacity="0.4"/>
-          <path d="M470 215 C540 215 540 285 620 285 L1130 285" fill="none" stroke="var(--blue)" stroke-width="2" class="flow" style="animation-delay:-2s"/>
-
-          <!-- AI services (down, newest, from era 6) -->
-          <path d="M980 215 C1030 215 1030 355 1080 355 L1130 355" fill="none" stroke="#151920" stroke-width="7"/>
-          <path d="M980 215 C1030 215 1030 355 1080 355 L1130 355" fill="none" stroke="var(--orange)" stroke-width="2" opacity="0.45"/>
-          <path d="M980 215 C1030 215 1030 355 1080 355 L1130 355" fill="none" stroke="var(--orange)" stroke-width="2" class="flow" style="animation-delay:-3s"/>
-
-          <!-- Platforms & endpoints (up, from era 1, matured) -->
-          <path d="M150 215 C250 215 270 80 380 80 L1130 80" fill="none" stroke="#151920" stroke-width="7"/>
-          <path d="M150 215 C250 215 270 80 380 80 L1130 80" fill="none" stroke="var(--blue)" stroke-width="2" opacity="0.4"/>
-          <path d="M150 215 C250 215 270 80 380 80 L1130 80" fill="none" stroke="var(--blue)" stroke-width="2" class="flow"/>
-
-          <!-- Automation & robotics (up, from era 5) -->
-          <path d="M760 215 C820 215 820 150 890 150 L1130 150" fill="none" stroke="#151920" stroke-width="7"/>
-          <path d="M760 215 C820 215 820 150 890 150 L1130 150" fill="none" stroke="var(--orange)" stroke-width="2" opacity="0.45"/>
-          <path d="M760 215 C820 215 820 150 890 150 L1130 150" fill="none" stroke="var(--orange)" stroke-width="2" class="flow" style="animation-delay:-1.4s"/>
-
-          <!-- Consulting & advisory (the backbone) -->
-          <path d="M150 215 L1130 215" fill="none" stroke="#151920" stroke-width="7"/>
-          <path d="M150 215 L1130 215" fill="none" stroke="var(--blue)" stroke-width="2" opacity="0.4"/>
-          <path d="M150 215 L1130 215" fill="none" stroke="var(--blue)" stroke-width="2" class="flow" style="animation-delay:-0.7s"/>
-
-          <!-- branch-off nodes on the backbone -->
-          <g fill="var(--bg)" stroke="var(--blue)" stroke-width="2">
-            <circle cx="470" cy="215" r="5"/>
-            <circle cx="760" cy="215" r="5"/>
-          </g>
-          <circle cx="980" cy="215" r="5" fill="var(--bg)" stroke="var(--orange)" stroke-width="2"/>
-
-          <!-- origin -->
-          <circle cx="150" cy="215" r="7" fill="var(--blue)"/>
-          <text class="evo-lane-label" x="138" y="211" text-anchor="end">Government</text>
-          <text class="evo-lane-label" x="138" y="227" text-anchor="end">IT consulting</text>
-
-          <!-- ===== pillar labels + today nodes ===== -->
-
-          <!-- Platforms & endpoints -->
-          <text class="evo-lane-label" x="392" y="74">Platforms &amp; endpoints</text>
-          <text class="evo-cap" x="392" y="92">BlackBerry &rarr; MDM &rarr; EMM &rarr; UEM &rarr; platform development</text>
-          <circle class="pulse" cx="1130" cy="80" r="7" fill="none" stroke="var(--blue)" stroke-width="1.5"/>
-          <circle cx="1130" cy="80" r="4.5" fill="var(--blue)"/>
-
-          <!-- Automation & robotics -->
-          <text class="evo-lane-label" x="772" y="144">Automation &amp; robotics</text>
-          <text class="evo-cap" x="772" y="162">intelligent automation &middot; RPA &middot; enterprise robotics</text>
-          <circle class="pulse" cx="1130" cy="150" r="7" fill="none" stroke="var(--orange)" stroke-width="1.5" style="animation-delay:1s"/>
-          <circle cx="1130" cy="150" r="4.5" fill="var(--orange)"/>
-
-          <!-- Consulting & advisory -->
-          <text class="evo-lane-label" x="772" y="208">Consultancy &amp; advisory</text>
-          <text class="evo-cap" x="772" y="234">strategy &middot; AI advisory &amp; policy</text>
-          <circle class="pulse" cx="1130" cy="215" r="7" fill="none" stroke="var(--blue)" stroke-width="1.5" style="animation-delay:.5s"/>
-          <circle cx="1130" cy="215" r="4.5" fill="var(--blue)"/>
-
-          <!-- Managed services & security -->
-          <text class="evo-lane-label" x="632" y="279">Managed services &amp; security</text>
-          <text class="evo-cap" x="632" y="297">managed service provider &middot; mobile &amp; cyber security</text>
-          <circle class="pulse" cx="1130" cy="285" r="7" fill="none" stroke="var(--blue)" stroke-width="1.5" style="animation-delay:1.5s"/>
-          <circle cx="1130" cy="285" r="4.5" fill="var(--blue)"/>
-
-          <!-- AI services -->
-          <text class="evo-lane-label" x="1115" y="349" text-anchor="end">AI services</text>
-          <text class="evo-cap" x="1115" y="367" text-anchor="end">advisory &middot; deployment &amp; management &middot; policy</text>
-          <circle class="pulse" cx="1130" cy="355" r="7" fill="none" stroke="var(--orange)" stroke-width="1.5" style="animation-delay:2s"/>
-          <circle cx="1130" cy="355" r="4.5" fill="var(--orange)"/>
-        </svg>
-      </div>
-
-      <div class="evo-mobile">
-        <ol>
-          <li>
-            <span class="lb">Government IT consulting</span>
-            <span class="ac">Our backbone</span>
-          </li>
-          <li>
-            <span class="lb">Platforms &amp; endpoints</span>
-            <span class="tg evo">BlackBerry &rarr; MDM &rarr; EMM &rarr; UEM</span><span class="tg add">Mobile app &amp; platform development</span>
-          </li>
-          <li>
-            <span class="lb">Managed services &amp; security</span>
-            <span class="tg add">Managed service provider</span><span class="tg add">Mobile &amp; cyber security</span>
-          </li>
-          <li>
-            <span class="lb">Automation &amp; robotics</span>
-            <span class="tg add">Intelligent Automation</span><span class="tg add">RPA</span><span class="tg add">Enterprise robotics</span>
-          </li>
-          <li>
-            <span class="lb">AI services &mdash; today</span>
-            <span class="tg add">AI advisory &amp; policy</span><span class="tg add">AI platform deployment &amp; management</span>
-          </li>
-        </ol>
-      </div>
-
-      <p class="evo-foot"><span class="dot"></span><span><b>One backbone, branching wider every era.</b> From government IT to AI &mdash; each capability we have built still powers our work today.</span></p>
-    </div>
-  </div>
-</section>
 
 <div class="divider"></div>
 
@@ -1937,50 +1789,8 @@ section { padding: clamp(40px, 5vw, 80px) 0 !important; }
 </style>
 
 <!-- ══════════ 48 HOUR PROTOTYPE ══════════ -->
-<section data-screen-label="Home / 48HrPrototype" style="background: var(--bg-elev); border-top: 1px solid var(--line); border-bottom: 1px solid var(--line);">
-  <div class="wrap">
-    <div class="offer-block">
-      <div class="eyebrow">FEATURED SERVICE</div>
-      <h2>From idea to prototype in 48 hours.</h2>
-      <p class="lead">When AI, automation or platform ideas are hard to explain, a prototype can create clarity fast. DELV's 48 Hour Prototype turns an idea, workflow or product concept into something stakeholders can see, test and discuss within two business days.</p>
-      <div class="hero-actions" style="margin-top:28px;">
-        <a href="48-hour-prototype.html" class="btn btn-primary">Learn more <span class="arrow">→</span></a>
-        <a href="contact.html" class="btn btn-secondary">Contact Us</a>
-      </div>
-    </div>
-  </div>
-</section>
 
 <!-- ══════════ AI READINESS PROGRAM ══════════ -->
-<section data-screen-label="Home / ReadinessProgram">
-  <div class="wrap">
-    <div style="display:grid; grid-template-columns: 1.1fr 1fr; gap: clamp(40px, 6vw, 80px); align-items: start;" class="readiness-grid">
-      <div>
-        <div class="eyebrow">PRODUCTISED OFFER</div>
-        <h2 style="margin-top:18px;">AI Readiness Program</h2>
-        <p class="lead" style="margin-top:20px;">An 8-week engagement designed to move your organisation from AI confusion to clear execution.</p>
-        <div style="margin-top: 32px; padding: 24px; background: var(--bg-elev); border: 1px solid var(--orange); border-radius: var(--radius);">
-          <div style="font-family:'JetBrains Mono',monospace; font-size:11px; color: var(--orange); letter-spacing:0.14em; margin-bottom:10px;">INVESTMENT</div>
-          <div style="font-size: clamp(28px, 3.5vw, 42px); font-weight: 700; color: var(--ink); letter-spacing:-0.02em;">From AUD $34,000</div>
-          <p style="margin-top:10px; font-size:13px; color:var(--ink-mute);">Fixed price. Clear scope. Defined outcomes.</p>
-          <a href="contact.html" class="btn btn-primary" style="margin-top:20px; width:100%; justify-content:center;">Start Your AI Audit <span class="arrow">→</span></a>
-        </div>
-      </div>
-      <div>
-        <div style="font-family:'JetBrains Mono',monospace; font-size:10px; color:var(--ink-mute); letter-spacing:0.16em; text-transform:uppercase; margin-bottom:20px;">WHAT'S INCLUDED</div>
-        <ul class="readiness-list">
-          <li>Executive AI workshop</li>
-          <li>Workflow and systems audit</li>
-          <li>AI opportunity mapping</li>
-          <li>Use-case prioritisation</li>
-          <li>Pilot planning</li>
-          <li>AI governance and policy framework</li>
-          <li>Implementation roadmap</li>
-        </ul>
-      </div>
-    </div>
-  </div>
-</section>
 <style>
   @media (max-width: 800px) { .readiness-grid { grid-template-columns: 1fr !important; } }
   .readiness-list { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 0; }
@@ -1990,33 +1800,6 @@ section { padding: clamp(40px, 5vw, 80px) 0 !important; }
 </style>
 
 <!-- ══════════ AI ADVISORY & EXECUTION PARTNER ══════════ -->
-<section data-screen-label="Home / AdvisoryPartner" style="background: var(--bg-elev); border-top: 1px solid var(--line); border-bottom: 1px solid var(--line);">
-  <div class="wrap">
-    <div style="display:grid; grid-template-columns: 1fr 1.1fr; gap: clamp(40px, 6vw, 80px); align-items: start;" class="advisory-grid">
-      <div>
-        <div class="eyebrow">ONGOING ENGAGEMENT</div>
-        <h2 style="margin-top:18px;">AI Advisory &amp; Execution Partner</h2>
-        <p class="lead" style="margin-top:20px;">We stay with you beyond strategy — helping your team execute, refine and scale AI across the business.</p>
-        <div style="margin-top: 32px; padding: 24px; background: var(--bg); border: 1px solid var(--blue); border-radius: var(--radius);">
-          <div style="font-family:'JetBrains Mono',monospace; font-size:11px; color: var(--blue); letter-spacing:0.14em; margin-bottom:10px;">RETAINER</div>
-          <div style="font-size: clamp(28px, 3.5vw, 42px); font-weight: 700; color: var(--ink); letter-spacing:-0.02em;">From AUD $12,500<span style="font-size:18px; font-weight:500;">/month</span></div>
-          <p style="margin-top:10px; font-size:13px; color:var(--ink-mute);">Ongoing support. Strategic partnership. Real execution.</p>
-          <a href="contact.html" class="btn btn-blue" style="margin-top:20px; width:100%; justify-content:center;">Talk to DELV <span class="arrow">→</span></a>
-        </div>
-      </div>
-      <div>
-        <div style="font-family:'JetBrains Mono',monospace; font-size:10px; color:var(--ink-mute); letter-spacing:0.16em; text-transform:uppercase; margin-bottom:20px;">WHAT WE DO TOGETHER</div>
-        <ul class="advisory-list">
-          <li>AI roadmap execution</li>
-          <li>Tool and vendor selection</li>
-          <li>Pilot delivery support</li>
-          <li>Leadership guidance</li>
-          <li>Ongoing optimisation</li>
-        </ul>
-      </div>
-    </div>
-  </div>
-</section>
 <style>
   @media (max-width: 800px) { .advisory-grid { grid-template-columns: 1fr !important; } }
   .advisory-list { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 0; }
@@ -2026,71 +1809,6 @@ section { padding: clamp(40px, 5vw, 80px) 0 !important; }
 </style>
 
 <!-- ══════════ AI APP DEVELOPMENT SECTION ══════════ -->
-<section data-screen-label="Home / AIApps">
-  <div class="wrap">
-    <div style="display:grid; grid-template-columns: 1fr 1fr; gap: clamp(40px, 6vw, 80px); align-items: center;" class="aiapps-grid">
-      <div>
-        <div class="eyebrow">AI APP DEVELOPMENT</div>
-        <h2 style="margin-top:18px;">AI-Infused Apps. Built Fast. Designed Right.</h2>
-        <p class="lead" style="margin-top:20px;">We build mobile apps and platforms powered by AI and designed for how people expect to use technology today.</p>
-        <p style="margin-top:16px;"><strong style="color:var(--ink);">Fast. Simple. Intelligent.</strong></p>
-        <p>From MVPs to enterprise platforms, we combine human-centred design, AI capability and full-stack development to deliver products that feel effortless.</p>
-        <div class="hero-actions" style="margin-top:28px;">
-          <a href="platform-development.html" class="btn btn-primary">Build My App <span class="arrow">→</span></a>
-          <a href="contact.html" class="btn btn-secondary">Talk to DELV</a>
-        </div>
-      </div>
-      <div>
-        <!-- AI App Visual -->
-        <div class="ai-app-visual">
-          <div class="aav-header">
-            <span class="aav-dot"></span>
-            <span style="font-family:'JetBrains Mono',monospace; font-size:11px; color:var(--ink-mute); letter-spacing:0.12em;">AI ASSISTANT</span>
-            <span class="aav-status">● LIVE</span>
-          </div>
-          <div class="aav-body">
-            <div class="aav-agent">
-              <div class="aav-agent-icon">🤖</div>
-              <div class="aav-agent-info">
-                <div style="font-weight:600; font-size:14px;">CFO Agent</div>
-                <div style="font-size:12px; color:var(--ink-mute);">Financial intelligence layer</div>
-              </div>
-              <div class="aav-badge aav-badge--active">Active</div>
-            </div>
-            <div class="aav-agent">
-              <div class="aav-agent-icon">💼</div>
-              <div class="aav-agent-info">
-                <div style="font-weight:600; font-size:14px;">Sales Agent</div>
-                <div style="font-size:12px; color:var(--ink-mute);">Pipeline &amp; deal intelligence</div>
-              </div>
-              <div class="aav-badge aav-badge--active">Active</div>
-            </div>
-            <div class="aav-agent">
-              <div class="aav-agent-icon">🎧</div>
-              <div class="aav-agent-info">
-                <div style="font-weight:600; font-size:14px;">Support Agent</div>
-                <div style="font-size:12px; color:var(--ink-mute);">Customer resolution AI</div>
-              </div>
-              <div class="aav-badge aav-badge--active">Active</div>
-            </div>
-            <div class="aav-agent">
-              <div class="aav-agent-icon">📅</div>
-              <div class="aav-agent-info">
-                <div style="font-weight:600; font-size:14px;">Booking App</div>
-                <div style="font-size:12px; color:var(--ink-mute);">AI-powered scheduling</div>
-              </div>
-              <div class="aav-badge aav-badge--idle">Idle</div>
-            </div>
-          </div>
-          <div class="aav-footer">
-            <span style="font-family:'JetBrains Mono',monospace; font-size:10px; color:var(--ink-mute);">4 agents running · 0 errors</span>
-            <span style="font-family:'JetBrains Mono',monospace; font-size:10px; color:var(--blue);">VIEW DASHBOARD →</span>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
 <style>
   @media (max-width: 800px) { .aiapps-grid { grid-template-columns: 1fr !important; } }
   .ai-app-visual { background: var(--bg-elev); border: 1px solid var(--line-strong); border-radius: var(--radius-lg); overflow: hidden; }
@@ -2112,6 +1830,37 @@ section { padding: clamp(40px, 5vw, 80px) 0 !important; }
   .oi { padding: 14px; border: 1px solid var(--line-strong); background: rgba(0,0,0,0.18); font-size: 13px; text-align: center; border-radius: var(--radius); }
   @media (max-width: 800px) { .offer-includes { grid-template-columns: repeat(2, 1fr) !important; } }
 </style>
+
+<section data-screen-label="Home / WhoWeAre">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="col-l">
+        <div class="eyebrow">WHO WE ARE</div>
+        <h2>AI That Creates Real Outcomes — Not Just Demos.</h2>
+      </div>
+      <div style="max-width:480px; align-self:start;">
+        <p>DELV helps organisations cut through the AI noise and get to what actually matters — real adoption, real productivity and real business outcomes.</p>
+        <p>We combine AI strategy, intelligent app development, agent engineering and platform delivery into one end-to-end capability. Governed, supported and operational.</p>
+        <a href="about.html" class="btn btn-ghost">Read our story <span class="arrow">→</span></a>
+      </div>
+    </div>
+
+    <figure class="media-frame mf-21x9" style="max-height:520px; margin-left:calc(-1*var(--pad)); margin-right:calc(-1*var(--pad)); width:calc(100% + 2*var(--pad)); border-radius:0;">
+      <img
+        src="assets/images/delv-hero-office-robot.jpg"
+        alt="DELV — operational AI and platform capability in a real enterprise environment"
+        loading="lazy"
+        style="object-position:center;"
+      >
+      <div class="mf-overlay"></div>
+      <figcaption class="mf-tag"><span class="dot"></span></figcaption>
+      <figcaption class="mf-caption">
+        <p class="mf-desc">Where emerging technology meets real-world delivery.</p>
+      </figcaption>
+    </figure>
+
+  </div>
+</section>
 
 <section data-screen-label="Home / Why">
   <div class="wrap">
@@ -2136,121 +1885,6 @@ section { padding: clamp(40px, 5vw, 80px) 0 !important; }
   </div>
 </section>
 
-<section data-screen-label="Home / Methodology" style="background: #161a21; border-top: 1px solid var(--line); border-bottom: 1px solid var(--line);">
-  <div class="wrap">
-    <div class="section-head">
-      <div class="col-l">
-        <div class="eyebrow">HOW WE WORK</div>
-        <h2>Strategy. Design. Build. Operate.</h2>
-      </div>
-      <p style="max-width:480px">Our AI delivery methodology runs the full lifecycle — from discovery and strategy through to live AI systems in production.</p>
-    </div>
-
-    <div class="flow-diagram" aria-label="DELV lifecycle: Consult, Design, Build, Operate — a continuous loop" role="img">
-      <svg viewBox="0 0 1200 200" preserveAspectRatio="xMidYMid meet">
-        <defs>
-          <linearGradient id="flowLine" x1="0" y1="0" x2="1" y2="0">
-            <stop offset="0" stop-color="#3288B5"/>
-            <stop offset="1" stop-color="#F15E2E"/>
-          </linearGradient>
-        </defs>
-
-        <!-- continuous return loop -->
-        <path d="M1050 78 C 1150 78 1150 162 1050 162 L 150 162 C 50 162 50 78 150 78"
-              fill="none" stroke="var(--line-strong)" stroke-width="1" stroke-dasharray="3 7" opacity="0.55"/>
-        <text class="fd-meta" x="600" y="186" text-anchor="middle">CONTINUOUS · OPERATE FEEDS THE NEXT CONSULT</text>
-
-        <!-- main track -->
-        <line x1="150" y1="78" x2="1050" y2="78" stroke="var(--line-strong)" stroke-width="1.5"/>
-        <line x1="150" y1="78" x2="1050" y2="78" stroke="url(#flowLine)" stroke-width="2"
-              stroke-dasharray="2 12" stroke-linecap="round">
-          <animate attributeName="stroke-dashoffset" from="0" to="-56" dur="3.2s" repeatCount="indefinite"/>
-        </line>
-
-        <!-- nodes -->
-        <g>
-          <text class="fd-ix" x="150" y="34" text-anchor="middle">01</text>
-          <text class="fd-node-label" x="150" y="54" text-anchor="middle">Consult</text>
-          <circle class="fd-ring" cx="150" cy="78" r="9" fill="none" stroke="#3288B5" stroke-width="1.5"/>
-          <circle cx="150" cy="78" r="7" fill="var(--bg)" stroke="#3288B5" stroke-width="2"/>
-        </g>
-        <g>
-          <text class="fd-ix" x="450" y="34" text-anchor="middle">02</text>
-          <text class="fd-node-label" x="450" y="54" text-anchor="middle">Design</text>
-          <circle class="fd-ring d2" cx="450" cy="78" r="9" fill="none" stroke="#3288B5" stroke-width="1.5"/>
-          <circle cx="450" cy="78" r="7" fill="var(--bg)" stroke="#3288B5" stroke-width="2"/>
-        </g>
-        <g>
-          <text class="fd-ix" x="750" y="34" text-anchor="middle">03</text>
-          <text class="fd-node-label" x="750" y="54" text-anchor="middle">Build</text>
-          <circle class="fd-ring d3" cx="750" cy="78" r="9" fill="none" stroke="#3288B5" stroke-width="1.5"/>
-          <circle cx="750" cy="78" r="7" fill="var(--bg)" stroke="#3288B5" stroke-width="2"/>
-        </g>
-        <g>
-          <text class="fd-ix" x="1050" y="34" text-anchor="middle" style="fill:var(--orange)">04</text>
-          <text class="fd-node-label" x="1050" y="54" text-anchor="middle">Operate</text>
-          <circle class="fd-ring d4" cx="1050" cy="78" r="9" fill="none" stroke="#F15E2E" stroke-width="1.5"/>
-          <circle cx="1050" cy="78" r="7" fill="var(--orange)" stroke="#F15E2E" stroke-width="2"/>
-        </g>
-
-        <!-- travelling pulse -->
-        <circle r="4" fill="#fff">
-          <animateMotion dur="6.5s" repeatCount="indefinite"
-            path="M150 78 H1050 C1150 78 1150 162 1050 162 H150 C50 162 50 78 150 78"/>
-        </circle>
-      </svg>
-    </div>
-
-    <div class="op-layer">
-      <div class="op-cell"><div class="ix">01 · AI STRATEGY</div><div><h4>Understand</h4><p>AI readiness assessment, opportunity mapping and governance framework.</p></div></div>
-      <div class="op-cell"><div class="ix">02 · DESIGN &amp; PLAN</div><div><h4>Architect</h4><p>AI system design, agent architecture and human-centred UX planning.</p></div></div>
-      <div class="op-cell"><div class="ix">03 · BUILD &amp; DEPLOY</div><div><h4>Engineer</h4><p>AI app development, agent engineering, integration and production deployment.</p></div></div>
-      <div class="op-cell"><div class="ix">04 · MANAGE &amp; OPTIMISE</div><div><h4>Operate</h4><p>Ongoing AI support, performance monitoring, iteration and continuous improvement.</p></div></div>
-    </div>
-
-    <!-- AI Workflow Automation Diagram -->
-    <div style="margin-top: 56px; border: 1px solid var(--line); border-radius: var(--radius); background: rgba(0,0,0,0.18); overflow:hidden;">
-      <div style="padding: 16px 24px; border-bottom: 1px solid var(--line); display:flex; align-items:center; justify-content:space-between; flex-wrap:wrap; gap:12px;">
-        <div style="font-family:'JetBrains Mono',monospace; font-size:10px; color:var(--ink-mute); letter-spacing:0.16em; text-transform:uppercase;">AI WORKFLOW AUTOMATION · EXAMPLE</div>
-        <div style="display:flex; align-items:center; gap:6px;">
-          <div style="width:6px;height:6px;border-radius:50%;background:#4ade80;box-shadow:0 0 6px #4ade80;"></div>
-          <span style="font-family:'JetBrains Mono',monospace;font-size:10px;color:#4ade80;letter-spacing:.1em;">RUNNING</span>
-        </div>
-      </div>
-      <div style="padding: 24px; display:flex; align-items:center; gap: 0; overflow-x:auto; flex-wrap:nowrap;" class="workflow-nodes">
-        <div class="wf-node wf-trigger">
-          <div class="wf-node-icon">📥</div>
-          <div class="wf-node-label">Trigger</div>
-          <div class="wf-node-sub">Email / API / Form</div>
-        </div>
-        <div class="wf-arrow">→</div>
-        <div class="wf-node wf-ai">
-          <div class="wf-node-icon">🤖</div>
-          <div class="wf-node-label">AI Agent</div>
-          <div class="wf-node-sub">Analyse &amp; decide</div>
-        </div>
-        <div class="wf-arrow">→</div>
-        <div class="wf-node wf-action">
-          <div class="wf-node-icon">⚙️</div>
-          <div class="wf-node-label">Action</div>
-          <div class="wf-node-sub">Update / Notify / File</div>
-        </div>
-        <div class="wf-arrow">→</div>
-        <div class="wf-node wf-integration">
-          <div class="wf-node-icon">🔗</div>
-          <div class="wf-node-label">Integration</div>
-          <div class="wf-node-sub">CRM / ERP / Slack</div>
-        </div>
-        <div class="wf-arrow">→</div>
-        <div class="wf-node wf-done">
-          <div class="wf-node-icon">✅</div>
-          <div class="wf-node-label">Complete</div>
-          <div class="wf-node-sub">Human review optional</div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
 <style>
   .workflow-nodes { gap: 0; }
   .wf-node { flex: none; padding: 16px 20px; background: var(--bg-elev); border: 1px solid var(--line); border-radius: var(--radius); text-align: center; min-width: 130px; }
@@ -2265,6 +1899,22 @@ section { padding: clamp(40px, 5vw, 80px) 0 !important; }
 </style>
 
 <!-- ══════════ TRUST / PROOF SECTION ══════════ -->
+<style>
+  .trust-card { padding: 28px; border: 1px solid var(--line); border-radius: var(--radius); background: var(--bg); transition: all .3s var(--t); }
+  .trust-card:hover { border-color: var(--line-strong); transform: translateY(-2px); }
+  .trust-icon { font-size: 28px; margin-bottom: 16px; }
+  .trust-card h4 { margin-bottom: 10px; }
+  .trust-card p { font-size: 14px; margin: 0; }
+  .trust-strip { padding: 32px; background: rgba(0,0,0,0.2); border: 1px solid var(--line); border-radius: var(--radius); text-align: center; }
+  .trust-stats { display: flex; align-items: center; justify-content: center; gap: 0; flex-wrap: wrap; }
+  .trust-stat { padding: 12px 40px; text-align: center; }
+  .trust-stat-num { display: block; font-size: clamp(22px, 2.5vw, 32px); font-weight: 700; color: var(--ink); letter-spacing: -0.02em; }
+  .trust-stat-label { display: block; font-family: 'JetBrains Mono', monospace; font-size: 10px; letter-spacing: 0.14em; color: var(--ink-mute); text-transform: uppercase; margin-top: 4px; }
+  .trust-stat-divider { width: 1px; height: 40px; background: var(--line-strong); flex: none; }
+  @media (max-width: 700px) { .trust-stat-divider { display: none; } .trust-stats { gap: 20px; } }
+</style>
+
+<!-- ══════════ INDUSTRIES SECTION ══════════ -->
 <section data-screen-label="Home / Trust" style="background: var(--bg-elev); border-top: 1px solid var(--line); border-bottom: 1px solid var(--line);">
   <div class="wrap">
     <div class="section-head">
@@ -2312,42 +1962,6 @@ section { padding: clamp(40px, 5vw, 80px) 0 !important; }
     </div>
   </div>
 </section>
-<style>
-  .trust-card { padding: 28px; border: 1px solid var(--line); border-radius: var(--radius); background: var(--bg); transition: all .3s var(--t); }
-  .trust-card:hover { border-color: var(--line-strong); transform: translateY(-2px); }
-  .trust-icon { font-size: 28px; margin-bottom: 16px; }
-  .trust-card h4 { margin-bottom: 10px; }
-  .trust-card p { font-size: 14px; margin: 0; }
-  .trust-strip { padding: 32px; background: rgba(0,0,0,0.2); border: 1px solid var(--line); border-radius: var(--radius); text-align: center; }
-  .trust-stats { display: flex; align-items: center; justify-content: center; gap: 0; flex-wrap: wrap; }
-  .trust-stat { padding: 12px 40px; text-align: center; }
-  .trust-stat-num { display: block; font-size: clamp(22px, 2.5vw, 32px); font-weight: 700; color: var(--ink); letter-spacing: -0.02em; }
-  .trust-stat-label { display: block; font-family: 'JetBrains Mono', monospace; font-size: 10px; letter-spacing: 0.14em; color: var(--ink-mute); text-transform: uppercase; margin-top: 4px; }
-  .trust-stat-divider { width: 1px; height: 40px; background: var(--line-strong); flex: none; }
-  @media (max-width: 700px) { .trust-stat-divider { display: none; } .trust-stats { gap: 20px; } }
-</style>
-
-<!-- ══════════ INDUSTRIES SECTION ══════════ -->
-<section data-screen-label="Home / Industries">
-  <div class="wrap">
-    <div class="section-head">
-      <div class="col-l">
-        <div class="eyebrow">INDUSTRIES</div>
-        <h2>Built for environments where it needs to work.</h2>
-      </div>
-      <p style="max-width:480px">We operate in sectors where getting it wrong is not an option.</p>
-    </div>
-
-    <div class="grid grid-3">
-      <a href="industries.html" class="card"><h3>Government &amp; Public Sector</h3><p>Security, compliance and procurement-sensitive AI delivery.</p><div class="card-link">View <span class="arrow">→</span></div></a>
-      <a href="industries.html" class="card"><h3>Enterprise &amp; Corporate</h3><p>From AI transformation to platform modernisation at scale.</p><div class="card-link">View <span class="arrow">→</span></div></a>
-      <a href="industries.html" class="card"><h3>Financial Services</h3><p>Secure, auditable and AI-governed by design.</p><div class="card-link">View <span class="arrow">→</span></div></a>
-      <a href="industries.html" class="card"><h3>Property &amp; Construction</h3><p>AI-connected field, project and site intelligence.</p><div class="card-link">View <span class="arrow">→</span></div></a>
-      <a href="industries.html" class="card"><h3>Health &amp; Community</h3><p>Human-centred AI where trust and accuracy are critical.</p><div class="card-link">View <span class="arrow">→</span></div></a>
-      <a href="industries.html" class="card"><h3>Startups &amp; Scaleups</h3><p>AI-powered MVPs to managed platforms — validate, build, scale.</p><div class="card-link">View <span class="arrow">→</span></div></a>
-    </div>
-  </div>
-</section>
 
 <section class="cta-banner">
   <div class="wrap">
@@ -2362,35 +1976,6 @@ section { padding: clamp(40px, 5vw, 80px) 0 !important; }
 </section>
 
 <!-- ══════════ OUR EXPERIENCE / LEGACY & TRUST ══════════ -->
-<section data-screen-label="Home / Legacy" style="background: #161a21; border-top: 1px solid var(--line);">
-  <div class="wrap">
-    <div class="section-head">
-      <div class="col-l">
-        <div class="eyebrow">OUR EXPERIENCE</div>
-        <h2>Twenty Years of Technology Delivery.</h2>
-      </div>
-      <p style="max-width:480px">Our foundation in enterprise mobility, security and managed services gives DELV unique credibility when it comes to deploying AI in complex, high-stakes environments.</p>
-    </div>
-
-    <div class="grid grid-3">
-      <div class="card">
-        <div class="card-num">HERITAGE</div>
-        <h3>Enterprise Mobility Pioneer</h3>
-        <p>DELV began as one of Australia's leading enterprise mobility and MDM/EMM/UEM specialists — managing thousands of devices for government and enterprise clients.</p>
-      </div>
-      <div class="card">
-        <div class="card-num">RECOGNITION</div>
-        <h3>BRW Fast 100</h3>
-        <p>Recognised as one of Australia's fastest-growing technology companies. A track record of delivery, not just ambition.</p>
-      </div>
-      <div class="card">
-        <div class="card-num">EVOLUTION</div>
-        <h3>From Managed Services to AI</h3>
-        <p>From BlackBerry and device management to platforms, AI and intelligent apps — DELV has continuously evolved to stay at the frontier of what organisations need.</p>
-      </div>
-    </div>
-  </div>
-</section>
 
 <div id="footer-slot"></div>
 
