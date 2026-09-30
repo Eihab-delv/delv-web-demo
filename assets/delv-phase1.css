@@ -1,0 +1,184 @@
+/* ==========================================================================
+   DELV — Phase 1 refresh · 01 Global site changes
+   Loaded LAST in <head> on every page so it overrides the inline base styles.
+   Page-specific <style> blocks later in <body> still win where they target
+   their own components.
+   ========================================================================== */
+
+:root {
+  /* Section rhythm — desktop ≈ 88–112px, mobile ≈ 56–72px */
+  --section-y: clamp(64px, 8vw, 104px);
+  --section-y-tight: clamp(40px, 5vw, 64px);
+  /* Side padding — 24px on mobile */
+  --pad: clamp(24px, 4vw, 56px);
+  /* Readable measure for body copy */
+  --measure: 66ch;
+  /* Single primary CTA colour (teal = brand blue, used as accent only) */
+  --cta-bg: var(--blue);
+  --cta-bg-hover: #3d9bcb;
+  --cta-shadow: 0 6px 20px rgba(50, 136, 181, 0.28);
+}
+
+/* ───── 1. Whitespace between major sections ───── */
+section { padding: var(--section-y) 0 !important; }
+.section-tight { padding: var(--section-y-tight) 0 !important; }
+.section-head { margin-bottom: clamp(36px, 4vw, 56px) !important; }
+
+/* credibility strip is a band, not a section */
+section.cred { padding: 0 !important; }
+
+/* photo bands sit inside the page gutter with modest spacing */
+section.photo-band { padding: clamp(24px, 3vw, 48px) 0 0 !important; }
+.photo-band > .media-frame {
+  width: calc(100% - 2 * var(--pad));
+  max-width: calc(var(--maxw) - 2 * var(--pad));
+  margin: 0 auto;
+  max-height: 520px;
+}
+
+/* ───── 2. Hero — controlled height so the first CTA stays above the fold ───── */
+.hero { padding: clamp(56px, 7vw, 104px) 0 clamp(48px, 5.5vw, 80px) !important; }
+
+/* ───── 3. Paragraph width (≈55–70 characters per line) ───── */
+p { max-width: var(--measure); }
+.lead { max-width: 60ch; }
+.text-center p,
+.cta-banner p,
+[style*="text-align:center"] p,
+[style*="text-align: center"] p { margin-left: auto; margin-right: auto; }
+
+/* ───── 4. One primary CTA style everywhere ───── */
+.btn {
+  padding: 14px 24px;
+  font-size: 14px;
+  font-weight: 600;
+  letter-spacing: 0.01em;
+  border-radius: var(--radius);
+  line-height: 1.2;
+}
+
+/* Primary = teal, identical everywhere (btn-blue is folded into it) */
+.btn-primary,
+.btn-blue,
+.form-toggle-btn {
+  background: var(--cta-bg) !important;
+  border-color: var(--cta-bg) !important;
+  color: #fff !important;
+  box-shadow: none !important;
+}
+.btn-primary:hover,
+.btn-blue:hover,
+.form-toggle-btn:hover {
+  background: var(--cta-bg-hover) !important;
+  border-color: var(--cta-bg-hover) !important;
+  box-shadow: var(--cta-shadow) !important;
+  transform: translateY(-1px);
+}
+
+/* Secondary = simple outline */
+.btn-secondary {
+  background: transparent;
+  color: var(--ink);
+  border: 1px solid var(--line-strong);
+}
+.btn-secondary:hover {
+  border-color: var(--ink);
+  background: rgba(255, 255, 255, 0.04);
+  box-shadow: none;
+}
+
+/* Tertiary = text link */
+.btn-ghost { padding: 14px 0; }
+
+/* the small nav button keeps its compact size */
+.nav-cta .btn { padding: 9px 16px !important; font-size: 12.5px; }
+
+/* Arrow accent on hover should not flip to orange */
+.card:hover .card-link .arrow { color: var(--blue); }
+
+/* ───── 5. Keyboard focus (accessibility) ───── */
+a:focus-visible,
+button:focus-visible,
+.btn:focus-visible,
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible {
+  outline: 2px solid var(--blue);
+  outline-offset: 3px;
+  border-radius: var(--radius);
+}
+
+/* ───── 6. Images: focal-point cropping instead of shrinking ───── */
+.media-frame > img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.media-frame > img:not([style*="object-position"]) { object-position: center 35%; }
+/* opt-in focal helpers: add to the <img> */
+.focal-top    { object-position: center 20% !important; }
+.focal-center { object-position: center center !important; }
+.focal-bottom { object-position: center 75% !important; }
+.focal-left   { object-position: 25% center !important; }
+.focal-right  { object-position: 75% center !important; }
+
+/* ───── 7. Emoji removed → numbered workflow markers ───── */
+.wf-node-icon {
+  width: 28px; height: 28px;
+  margin: 0 auto 10px;
+  border-radius: 50%;
+  border: 1px solid var(--line-strong);
+  display: grid; place-items: center;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 11px !important;
+  letter-spacing: 0.04em;
+  color: var(--blue);
+}
+
+/* ───── 8. Fast responsive rules ───── */
+@media (max-width: 900px) {
+  .grid-3, .grid-4 { grid-template-columns: 1fr 1fr; }
+}
+
+@media (max-width: 768px) {
+  /* hero copy + CTAs stack vertically */
+  .hero-cols,
+  .hero-cols-48 { grid-template-columns: 1fr !important; gap: 32px !important; }
+  .hero-actions {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 12px;
+    margin-top: 28px;
+  }
+  .hero-actions .btn,
+  .cta-banner .hero-actions .btn {
+    width: 100%;
+    justify-content: center;
+    white-space: normal;
+    text-align: center;
+  }
+  .hero { padding: 48px 0 48px !important; }
+  .hero .lead { margin-top: 16px; }
+
+  /* one-column cards where copy runs past two lines */
+  .grid-2, .grid-3, .grid-4 { grid-template-columns: 1fr !important; }
+
+  /* photo bands: crop around the subject rather than a thin strip */
+  .photo-band > .media-frame,
+  .media-frame.mf-21x9 { aspect-ratio: 4 / 3; }
+  .media-frame .mf-caption .mf-desc { font-size: 14px; }
+}
+
+@media (max-width: 600px) {
+  .cred-row { grid-template-columns: 1fr 1fr; }
+}
+
+/* never allow horizontal page scroll */
+html, body { overflow-x: clip; }
+
+/* ───── 10. Mobile launch check — hero H1 ~36–42px ───── */
+@media (max-width: 768px) {
+  .hero h1 { font-size: clamp(36px, 10vw, 42px) !important; line-height: 1.08; }
+}
