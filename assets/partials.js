@@ -1,4 +1,4 @@
-// DELV — shared nav + footer injector
+// DELV — shared nav + footer component (single source for header, logo and footer on every page)
 (function() {
   const PAGES = [
     { href: 'index.html', label: 'Home', key: 'home' },
@@ -33,7 +33,7 @@
         </a>
         <ul class="nav-links">${links}</ul>
         <div class="nav-cta">
-          ${current !== 'home' ? '<a href="contact.html" class="btn btn-secondary">Start a conversation</a>' : ''}
+          ${current !== 'home' ? '<a href="contact.html" class="btn btn-secondary">Contact Us</a>' : ''}
           <button class="nav-burger" aria-label="Open menu" onclick="document.querySelector('.mobile-menu').classList.add('open')">
             <svg width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M3 7h18M3 12h18M3 17h18" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
           </button>
